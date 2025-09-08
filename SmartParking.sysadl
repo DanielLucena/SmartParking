@@ -1,0 +1,1 @@
+Model SysADLModel ; package SysADL.types { value type Int { } value type Boolean { } value type String { } value type Void { } value type Real { } } Requirement LiberarEntrada ( 1 ) { text = "Sistema deve libera a entrada de veiculos e persistir essa informação" }

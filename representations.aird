@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:description_2="http://www.eclipse.org/sirius/table/description/1.1.0" xmlns:diagram="http://www.eclipse.org/sirius/diagram/1.1.0" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.3/notation" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:sysadl="http://org.sysadl" xmlns:table="http://www.eclipse.org/sirius/table/1.1.0" xmlns:viewpoint="http://www.eclipse.org/sirius/1.1.0" xsi:schemaLocation="http://www.eclipse.org/sirius/description/1.1.0 http://www.eclipse.org/sirius/1.1.0#//description http://www.eclipse.org/sirius/diagram/description/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description http://www.eclipse.org/sirius/table/description/1.1.0 http://www.eclipse.org/sirius/table/1.1.0#//description http://www.eclipse.org/sirius/diagram/description/style/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description/style">
+  <viewpoint:DAnalysis uid="_SpJM8IzVEfCG1r6zVwu40w" selectedViews="_hJyL4IzVEfCG1r6zVwu40w _hKYBwIzVEfCG1r6zVwu40w _hNPvkIzVEfCG1r6zVwu40w _hO6jgIzVEfCG1r6zVwu40w _hQq3AIzVEfCG1r6zVwu40w" version="15.4.1.202403191723">
+    <semanticResources>SmartParking.sysadl</semanticResources>
+    <ownedViews xmi:type="viewpoint:DView" uid="_hJyL4IzVEfCG1r6zVwu40w">
+      <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/org.sysadl.viewpoints/description/SysADL_vp.odesign#//@ownedViewpoints[name='SysADL.Behavioral']"/>
+    </ownedViews>
+    <ownedViews xmi:type="viewpoint:DView" uid="_hKYBwIzVEfCG1r6zVwu40w">
+      <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/org.sysadl.viewpoints/description/SysADL_vp.odesign#//@ownedViewpoints[name='SysADL.Requirements']"/>
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_hKldIIzVEfCG1r6zVwu40w" name="Requirements Diagram" repPath="#_hKhywIzVEfCG1r6zVwu40w" changeId="1757351048495">
+        <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/org.sysadl.viewpoints/description/SysADL_vp.odesign#//@ownedViewpoints[name='SysADL.Requirements']/@ownedRepresentations[name='SysADL.Requirements.Main']"/>
+        <target xmi:type="sysadl:Model" href="SmartParking.sysadl#/"/>
+      </ownedRepresentationDescriptors>
+    </ownedViews>
+    <ownedViews xmi:type="viewpoint:DView" uid="_hNPvkIzVEfCG1r6zVwu40w">
+      <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/org.sysadl.viewpoints/description/SysADL_vp.odesign#//@ownedViewpoints[name='SysADL.Structural']"/>
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_hNSL0IzVEfCG1r6zVwu40w" name="Package Diagram" repPath="#_hNQ9sIzVEfCG1r6zVwu40w" changeId="1757350913669">
+        <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/org.sysadl.viewpoints/description/SysADL_vp.odesign#//@ownedViewpoints[name='SysADL.Structural']/@ownedRepresentations[name='SysADL.Package']"/>
+        <target xmi:type="sysadl:Model" href="SmartParking.sysadl#/"/>
+      </ownedRepresentationDescriptors>
+    </ownedViews>
+    <ownedViews xmi:type="viewpoint:DView" uid="_hO6jgIzVEfCG1r6zVwu40w">
+      <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/org.sysadl.viewpoints/description/SysADL_vp.odesign#//@ownedViewpoints[name='SysADL.Allocation']"/>
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_hQnMoIzVEfCG1r6zVwu40w" name="Allocation Table for SysADLModel" repPath="#_hPtNsIzVEfCG1r6zVwu40w">
+        <description xmi:type="description_2:EditionTableDescription" href="platform:/plugin/org.sysadl.viewpoints/description/SysADL_vp.odesign#//@ownedViewpoints[name='SysADL.Allocation']/@ownedRepresentations[name='SysADL.Allocation.Table']"/>
+        <target xmi:type="sysadl:Model" href="SmartParking.sysadl#/"/>
+      </ownedRepresentationDescriptors>
+    </ownedViews>
+    <ownedViews xmi:type="viewpoint:DView" uid="_hQq3AIzVEfCG1r6zVwu40w">
+      <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/org.sysadl.viewpoints/description/SysADL_vp.odesign#//@ownedViewpoints[name='SysADL.Executable']"/>
+    </ownedViews>
+  </viewpoint:DAnalysis>
+  <diagram:DSemanticDiagram uid="_hKhywIzVEfCG1r6zVwu40w">
+    <ownedAnnotationEntries xmi:type="description:AnnotationEntry" uid="_hLElUIzVEfCG1r6zVwu40w" source="GMF_DIAGRAMS">
+      <data xmi:type="notation:Diagram" xmi:id="_hLElUYzVEfCG1r6zVwu40w" type="Sirius" element="_hKhywIzVEfCG1r6zVwu40w" measurementUnit="Pixel">
+        <children xmi:type="notation:Node" xmi:id="_hM_Q4IzVEfCG1r6zVwu40w" type="2002" element="_hLGagIzVEfCG1r6zVwu40w">
+          <children xmi:type="notation:Node" xmi:id="_hNF-kIzVEfCG1r6zVwu40w" type="5006"/>
+          <children xmi:type="notation:Node" xmi:id="_hNHMsIzVEfCG1r6zVwu40w" type="7001">
+            <children xmi:type="notation:Node" xmi:id="_msUAUIzVEfCG1r6zVwu40w" type="3009" element="_mqv6EIzVEfCG1r6zVwu40w">
+              <children xmi:type="notation:Node" xmi:id="_msV1gIzVEfCG1r6zVwu40w" type="5004"/>
+              <children xmi:type="notation:Node" xmi:id="_msZf4IzVEfCG1r6zVwu40w" type="7003">
+                <children xmi:type="notation:Node" xmi:id="_msfmgIzVEfCG1r6zVwu40w" type="3010" element="_mrFRQIzVEfCG1r6zVwu40w">
+                  <styles xmi:type="notation:FontStyle" xmi:id="_msfmgYzVEfCG1r6zVwu40w" fontName="Segoe UI" fontHeight="8"/>
+                  <layoutConstraint xmi:type="notation:Location" xmi:id="_msfmgozVEfCG1r6zVwu40w"/>
+                </children>
+                <children xmi:type="notation:Node" xmi:id="_msgNkIzVEfCG1r6zVwu40w" type="3010" element="_mrbPgIzVEfCG1r6zVwu40w">
+                  <styles xmi:type="notation:FontStyle" xmi:id="_msgNkYzVEfCG1r6zVwu40w" fontName="Segoe UI" fontHeight="8"/>
+                  <layoutConstraint xmi:type="notation:Location" xmi:id="_msgNkozVEfCG1r6zVwu40w"/>
+                </children>
+                <styles xmi:type="notation:SortingStyle" xmi:id="_msZf4YzVEfCG1r6zVwu40w"/>
+                <styles xmi:type="notation:FilteringStyle" xmi:id="_msZf4ozVEfCG1r6zVwu40w"/>
+              </children>
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_msUAUYzVEfCG1r6zVwu40w" fontName="Segoe UI" fontHeight="8"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_msUAUozVEfCG1r6zVwu40w" x="180" y="69" width="203" height="108"/>
+            </children>
+            <styles xmi:type="notation:SortingStyle" xmi:id="_hNHMsYzVEfCG1r6zVwu40w"/>
+            <styles xmi:type="notation:FilteringStyle" xmi:id="_hNHMsozVEfCG1r6zVwu40w"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_hM_Q4YzVEfCG1r6zVwu40w" fontName="Segoe UI" fontHeight="8"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_hM_Q4ozVEfCG1r6zVwu40w" width="768" height="333"/>
+        </children>
+        <styles xmi:type="notation:DiagramStyle" xmi:id="_hLElUozVEfCG1r6zVwu40w"/>
+      </data>
+    </ownedAnnotationEntries>
+    <ownedAnnotationEntries xmi:type="description:AnnotationEntry" uid="_hMzqsIzVEfCG1r6zVwu40w" source="DANNOTATION_CUSTOMIZATION_KEY">
+      <data xmi:type="diagram:ComputedStyleDescriptionRegistry" uid="_hM040IzVEfCG1r6zVwu40w"/>
+    </ownedAnnotationEntries>
+    <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_hLGagIzVEfCG1r6zVwu40w" name="req SysADLModel">
+      <target xmi:type="sysadl:Model" href="SmartParking.sysadl#/"/>
+      <semanticElements xmi:type="sysadl:Model" href="SmartParking.sysadl#/"/>
+      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_hMhW0IzVEfCG1r6zVwu40w" showIcon="false" labelAlignment="LEFT" borderSize="1" borderSizeComputationExpression="1" foregroundColor="255,255,255">
+        <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.sysadl.viewpoints/description/SysADL_vp.odesign#//@ownedViewpoints[name='SysADL.Requirements']/@ownedRepresentations[name='SysADL.Requirements.Main']/@defaultLayer/@containerMappings[name='SysADL.Req.Self']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.sysadl.viewpoints/description/SysADL_vp.odesign#//@ownedViewpoints[name='SysADL.Requirements']/@ownedRepresentations[name='SysADL.Requirements.Main']/@defaultLayer/@containerMappings[name='SysADL.Req.Self']"/>
+      <ownedDiagramElements xmi:type="diagram:DNodeList" uid="_mqv6EIzVEfCG1r6zVwu40w" name="&lt;&lt;requirement>>&#xA;LiberarEntrada">
+        <target xmi:type="sysadl:Requirement" href="SmartParking.sysadl#1"/>
+        <semanticElements xmi:type="sysadl:Requirement" href="SmartParking.sysadl#1"/>
+        <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_mrDcEIzVEfCG1r6zVwu40w" showIcon="false" borderSize="1" borderSizeComputationExpression="1">
+          <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.sysadl.viewpoints/description/SysADL_vp.odesign#//@ownedViewpoints[name='SysADL.Requirements']/@ownedRepresentations[name='SysADL.Requirements.Main']/@defaultLayer/@containerMappings[name='SysADL.Req.Self']/@subContainerMappings[name='SysADL.Req.Requirement']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.sysadl.viewpoints/description/SysADL_vp.odesign#//@ownedViewpoints[name='SysADL.Requirements']/@ownedRepresentations[name='SysADL.Requirements.Main']/@defaultLayer/@containerMappings[name='SysADL.Req.Self']/@subContainerMappings[name='SysADL.Req.Requirement']"/>
+        <ownedElements xmi:type="diagram:DNodeListElement" uid="_mrFRQIzVEfCG1r6zVwu40w" name="id=1">
+          <target xmi:type="sysadl:Requirement" href="SmartParking.sysadl#1"/>
+          <semanticElements xmi:type="sysadl:Requirement" href="SmartParking.sysadl#1"/>
+          <ownedStyle xmi:type="diagram:Dot" uid="_mrZaUIzVEfCG1r6zVwu40w" showIcon="false" labelPosition="node">
+            <description xmi:type="style:DotDescription" href="platform:/plugin/org.sysadl.viewpoints/description/SysADL_vp.odesign#//@ownedViewpoints[name='SysADL.Requirements']/@ownedRepresentations[name='SysADL.Requirements.Main']/@defaultLayer/@containerMappings[name='SysADL.Req.Self']/@subContainerMappings[name='SysADL.Req.Requirement']/@subNodeMappings[name='SysADL.Red.ID']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.sysadl.viewpoints/description/SysADL_vp.odesign#//@ownedViewpoints[name='SysADL.Requirements']/@ownedRepresentations[name='SysADL.Requirements.Main']/@defaultLayer/@containerMappings[name='SysADL.Req.Self']/@subContainerMappings[name='SysADL.Req.Requirement']/@subNodeMappings[name='SysADL.Red.ID']"/>
+        </ownedElements>
+        <ownedElements xmi:type="diagram:DNodeListElement" uid="_mrbPgIzVEfCG1r6zVwu40w" name="text=Sistema deve libera a entrada de veiculos e persistir essa informação">
+          <target xmi:type="sysadl:Requirement" href="SmartParking.sysadl#1"/>
+          <semanticElements xmi:type="sysadl:Requirement" href="SmartParking.sysadl#1"/>
+          <ownedStyle xmi:type="diagram:Dot" uid="_mrzC8IzVEfCG1r6zVwu40w" showIcon="false" labelPosition="node">
+            <description xmi:type="style:DotDescription" href="platform:/plugin/org.sysadl.viewpoints/description/SysADL_vp.odesign#//@ownedViewpoints[name='SysADL.Requirements']/@ownedRepresentations[name='SysADL.Requirements.Main']/@defaultLayer/@containerMappings[name='SysADL.Req.Self']/@subContainerMappings[name='SysADL.Req.Requirement']/@subNodeMappings[name='SysADL.Req.Text']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.sysadl.viewpoints/description/SysADL_vp.odesign#//@ownedViewpoints[name='SysADL.Requirements']/@ownedRepresentations[name='SysADL.Requirements.Main']/@defaultLayer/@containerMappings[name='SysADL.Req.Self']/@subContainerMappings[name='SysADL.Req.Requirement']/@subNodeMappings[name='SysADL.Req.Text']"/>
+        </ownedElements>
+      </ownedDiagramElements>
+    </ownedDiagramElements>
+    <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/org.sysadl.viewpoints/description/SysADL_vp.odesign#//@ownedViewpoints[name='SysADL.Requirements']/@ownedRepresentations[name='SysADL.Requirements.Main']"/>
+    <filterVariableHistory xmi:type="diagram:FilterVariableHistory" uid="_hKjA4IzVEfCG1r6zVwu40w"/>
+    <activatedLayers xmi:type="description_1:Layer" href="platform:/plugin/org.sysadl.viewpoints/description/SysADL_vp.odesign#//@ownedViewpoints[name='SysADL.Requirements']/@ownedRepresentations[name='SysADL.Requirements.Main']/@defaultLayer"/>
+    <target xmi:type="sysadl:Model" href="SmartParking.sysadl#/"/>
+  </diagram:DSemanticDiagram>
+  <diagram:DSemanticDiagram uid="_hNQ9sIzVEfCG1r6zVwu40w">
+    <ownedAnnotationEntries xmi:type="description:AnnotationEntry" uid="_hNSy4IzVEfCG1r6zVwu40w" source="GMF_DIAGRAMS">
+      <data xmi:type="notation:Diagram" xmi:id="_hNSy4YzVEfCG1r6zVwu40w" type="Sirius" element="_hNQ9sIzVEfCG1r6zVwu40w" measurementUnit="Pixel">
+        <children xmi:type="notation:Node" xmi:id="_hOeeoIzVEfCG1r6zVwu40w" type="2002" element="_hNUBAIzVEfCG1r6zVwu40w">
+          <children xmi:type="notation:Node" xmi:id="_hOfFsIzVEfCG1r6zVwu40w" type="5006"/>
+          <children xmi:type="notation:Node" xmi:id="_hOfswIzVEfCG1r6zVwu40w" type="7001">
+            <children xmi:type="notation:Node" xmi:id="_hOg64IzVEfCG1r6zVwu40w" type="3007" element="_hOS4cIzVEfCG1r6zVwu40w">
+              <children xmi:type="notation:Node" xmi:id="_hOr6AIzVEfCG1r6zVwu40w" type="5003">
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_hOr6AYzVEfCG1r6zVwu40w" y="5"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_hOvkYIzVEfCG1r6zVwu40w" type="3003" element="_hOcCYIzVEfCG1r6zVwu40w">
+                <styles xmi:type="notation:ShapeStyle" xmi:id="_hOvkYYzVEfCG1r6zVwu40w" fontName="Segoe UI"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_hOvkYozVEfCG1r6zVwu40w"/>
+              </children>
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_hOg64YzVEfCG1r6zVwu40w" fontName="Segoe UI" fontHeight="8"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_hOg64ozVEfCG1r6zVwu40w" width="100" height="60"/>
+            </children>
+            <styles xmi:type="notation:SortingStyle" xmi:id="_hOfswYzVEfCG1r6zVwu40w"/>
+            <styles xmi:type="notation:FilteringStyle" xmi:id="_hOfswozVEfCG1r6zVwu40w"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_hOeeoYzVEfCG1r6zVwu40w" fontName="Segoe UI" fontHeight="8"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_hOeeoozVEfCG1r6zVwu40w" width="600" height="400"/>
+        </children>
+        <styles xmi:type="notation:DiagramStyle" xmi:id="_hNSy4ozVEfCG1r6zVwu40w"/>
+      </data>
+    </ownedAnnotationEntries>
+    <ownedAnnotationEntries xmi:type="description:AnnotationEntry" uid="_hOd3kIzVEfCG1r6zVwu40w" source="DANNOTATION_CUSTOMIZATION_KEY">
+      <data xmi:type="diagram:ComputedStyleDescriptionRegistry" uid="_hOd3kYzVEfCG1r6zVwu40w"/>
+    </ownedAnnotationEntries>
+    <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_hNUBAIzVEfCG1r6zVwu40w" name="bdd [pkg] SysADLModel" width="60" height="40">
+      <target xmi:type="sysadl:Model" href="SmartParking.sysadl#/"/>
+      <semanticElements xmi:type="sysadl:Model" href="SmartParking.sysadl#/"/>
+      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_hOQcMIzVEfCG1r6zVwu40w" showIcon="false" labelAlignment="LEFT" borderSize="1" borderSizeComputationExpression="1" foregroundColor="255,255,255">
+        <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.sysadl.viewpoints/description/SysADL_vp.odesign#//@ownedViewpoints[name='SysADL.Structural']/@ownedRepresentations[name='SysADL.Package']/@defaultLayer/@containerMappings[name='Pkg.Self']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.sysadl.viewpoints/description/SysADL_vp.odesign#//@ownedViewpoints[name='SysADL.Structural']/@ownedRepresentations[name='SysADL.Package']/@defaultLayer/@containerMappings[name='Pkg.Self']"/>
+      <ownedDiagramElements xmi:type="diagram:DNode" uid="_hOS4cIzVEfCG1r6zVwu40w" name="&lt;&lt;package>>&#xA;SysADL.types" width="10" height="6" resizeKind="NSEW">
+        <target xmi:type="sysadl:Package" href="SmartParking.sysadl#//@packages[name='SysADL.types']"/>
+        <semanticElements xmi:type="sysadl:Package" href="SmartParking.sysadl#//@packages[name='SysADL.types']"/>
+        <ownedStyle xmi:type="diagram:Square" uid="_hOcCYIzVEfCG1r6zVwu40w" showIcon="false" labelPosition="node" width="10" height="6" color="230,230,250">
+          <description xmi:type="style:SquareDescription" href="platform:/plugin/org.sysadl.viewpoints/description/SysADL_vp.odesign#//@ownedViewpoints[name='SysADL.Structural']/@ownedRepresentations[name='SysADL.Package']/@defaultLayer/@containerMappings[name='Pkg.Self']/@subNodeMappings[name='Pkg.Package']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.sysadl.viewpoints/description/SysADL_vp.odesign#//@ownedViewpoints[name='SysADL.Structural']/@ownedRepresentations[name='SysADL.Package']/@defaultLayer/@containerMappings[name='Pkg.Self']/@subNodeMappings[name='Pkg.Package']"/>
+      </ownedDiagramElements>
+    </ownedDiagramElements>
+    <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/org.sysadl.viewpoints/description/SysADL_vp.odesign#//@ownedViewpoints[name='SysADL.Structural']/@ownedRepresentations[name='SysADL.Package']"/>
+    <filterVariableHistory xmi:type="diagram:FilterVariableHistory" uid="_hNRkwIzVEfCG1r6zVwu40w"/>
+    <activatedLayers xmi:type="description_1:Layer" href="platform:/plugin/org.sysadl.viewpoints/description/SysADL_vp.odesign#//@ownedViewpoints[name='SysADL.Structural']/@ownedRepresentations[name='SysADL.Package']/@defaultLayer"/>
+    <target xmi:type="sysadl:Model" href="SmartParking.sysadl#/"/>
+  </diagram:DSemanticDiagram>
+  <table:DTable uid="_hPtNsIzVEfCG1r6zVwu40w">
+    <target xmi:type="sysadl:Model" href="SmartParking.sysadl#/"/>
+    <columns xmi:type="table:DFeatureColumn" uid="_hQi7MIzVEfCG1r6zVwu40w" label="Source" featureName="source">
+      <originMapping xmi:type="description_2:FeatureColumnMapping" href="platform:/plugin/org.sysadl.viewpoints/description/SysADL_vp.odesign#//@ownedViewpoints[name='SysADL.Allocation']/@ownedRepresentations[name='SysADL.Allocation.Table']/@ownedColumnMappings[name='SysADL.Alloc.Source']"/>
+    </columns>
+    <columns xmi:type="table:DFeatureColumn" uid="_hQmlkIzVEfCG1r6zVwu40w" label="Target" featureName="target">
+      <originMapping xmi:type="description_2:FeatureColumnMapping" href="platform:/plugin/org.sysadl.viewpoints/description/SysADL_vp.odesign#//@ownedViewpoints[name='SysADL.Allocation']/@ownedRepresentations[name='SysADL.Allocation.Table']/@ownedColumnMappings[name='SysADL.Alloc.Target']"/>
+    </columns>
+    <description xmi:type="description_2:EditionTableDescription" href="platform:/plugin/org.sysadl.viewpoints/description/SysADL_vp.odesign#//@ownedViewpoints[name='SysADL.Allocation']/@ownedRepresentations[name='SysADL.Allocation.Table']"/>
+  </table:DTable>
+</xmi:XMI>
