@@ -12,7 +12,7 @@ Requirement ControleDeEstacionamentoFR (0) {
     text = "Sistema Completo"
 
     Requirement GerenciarAcessoVeicularFR (1) {
-        text = "" derive AbrirCancelaFR , FecharCancelaFR , GerenciarSaidaVeicularFR ;
+        text = "" derive AbrirCancelaFR , FecharCancelaFR , EmitirTicketFR ;
 
         Requirement GerenciarAcessoComPlanoFR (6) { }
         
@@ -32,4 +32,4 @@ Requirement ControleDeEstacionamentoFR (0) {
 
     Requirement LerPlacasDosVeiculosFR (5) { }
 
-Requirement GerenciarSaidaVeicularFR ( 13 ) { derive AbrirCancelaFR , FecharCancelaFR ; } } Requirement EmitirTicketFR ( 13 ) { } Requirement LerTicketFR ( 9 ) { } Requirement PagarComCreditoFR ( 10 ) { } Requirement PagarComDebitoFR ( 11 ) { } Requirement PagarComPixFR ( 12 ) { } Requirement AbrirCancelaFR ( 14 ) { } Requirement FecharCancelaFR ( 15 ) { }
+Requirement GerenciarSaidaVeicularFR ( 13 ) { derive AbrirCancelaFR , FecharCancelaFR ; } } Requirement EmitirTicketFR ( 16 ) { } Requirement LerTicketFR ( 9 ) { } Requirement PagarComCreditoFR ( 10 ) { } Requirement PagarComDebitoFR ( 11 ) { } Requirement PagarComPixFR ( 12 ) { } Requirement AbrirCancelaFR ( 14 ) { } Requirement FecharCancelaFR ( 15 ) { }
