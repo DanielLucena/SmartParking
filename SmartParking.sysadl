@@ -1,1 +1,35 @@
-Model SysADLModel ; package SysADL.types { value type Int { } value type Boolean { } value type String { } value type Void { } value type Real { } } Requirement LiberarEntrada ( 1 ) { text = "Sistema deve libera a entrada de veiculos e persistir essa informação" }
+Model SysADLModel;
+
+package SysADL.types {
+    value type Int { }
+    value type Boolean { }
+    value type String { }
+    value type Void { }
+    value type Real { }
+}
+
+Requirement ControleDeEstacionamentoFR (0) {
+    text = "Sistema Completo"
+
+    Requirement GerenciarAcessoVeicularFR (1) {
+        text = "" derive AbrirCancelaFR , FecharCancelaFR , GerenciarSaidaVeicularFR ;
+
+        Requirement GerenciarAcessoComPlanoFR (6) { }
+        
+        Requirement GerenciarAcessoPessoasAutorizadasFR (7) { derive FecharCancelaFR ; }
+        
+        Requirement GerenciarAcessoComTicketFR (8) { derive GerenciarSaidaVeicularFR , LerTicketFR ; }
+    }
+
+    Requirement GerenciarPagamentoFR (2) {
+        text = ""
+        
+    derive LerTicketFR , PagarComCreditoFR , PagarComDebitoFR , PagarComPixFR ; }
+
+    Requirement GerenciarVagasFR (3) { }
+
+    Requirement MonitorarDeslocamentoVeiculosFR (4) { }
+
+    Requirement LerPlacasDosVeiculosFR (5) { }
+
+Requirement GerenciarSaidaVeicularFR ( 13 ) { derive AbrirCancelaFR , FecharCancelaFR ; } } Requirement EmitirTicketFR ( 13 ) { } Requirement LerTicketFR ( 9 ) { } Requirement PagarComCreditoFR ( 10 ) { } Requirement PagarComDebitoFR ( 11 ) { } Requirement PagarComPixFR ( 12 ) { } Requirement AbrirCancelaFR ( 14 ) { } Requirement FecharCancelaFR ( 15 ) { }
