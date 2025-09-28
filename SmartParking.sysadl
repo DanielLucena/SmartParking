@@ -6,7 +6,37 @@ package SysADL.types {
     value type String { }
     value type Void { }
     value type Real { }
-enum ParkingBarrierCommand { Open , Close } enum ParkingBarrierStatus { Opening , Closing , Open , Closed , Blocked , Error } enum PrintButtonCommand { Print } enum PaymentType { Debit , Credit , Pix } datatype PaymentInfo { attributes : paymentType : PaymentType ; real : Int ; cents : Int ; qrcode : Matrix ; } enum TransactionStatus { Success , Failure } enum Direction { Up , Down , Left , Right } datatype VacancyDirection { attributes : newAttribute : Direction ; quantity : Int ; } datatype Vacancy { attributes : vacancyDirection1 : VacancyDirection ; vacancyDirection2 : VacancyDirection ; } datatype TicketData { attributes : id : Int ; entryTimestamp : Int ; plate : String ; } value type Matrix { } datatype UserTouchInput { attributes : xPosition : Int ; yPosition : Int ; } datatype VideoFrame { attributes : positionX : Int ; positionY : Int ; r : Int ; g : Int ; b : Int ; } datatype ParkingSpaceStatus { attributes : parkingSpotId : Int ; occupied : Boolean ; } datatype VehicleInfo { attributes : plate : String ; authorized : Boolean ; } datatype ParkingBarrierStatus { attributes : status : ParkingBarrierStatus ; } datatype ParkingBarrierCommand { attributes : command : ParkingBarrierCommand ; } datatype TransactionStatus { attributes : transactionStatus : TransactionStatus ; } }
+enum ParkingBarrierCommand { Open , Close } 
+enum ParkingBarrierStatus { Opening , Closing , Open , Closed , Blocked , Error } 
+enum PrintButtonCommand { Print } 
+enum PaymentType { Debit , Credit , Pix } 
+datatype PaymentInfo { 
+	attributes : paymentType : PaymentType ; real : Int ; cents : Int ; qrcode : Matrix ;
+} enum TransactionStatus { Success , Failure } 
+enum Direction { Up , Down , Left , Right } 
+datatype VacancyDirection { 
+	attributes : newAttribute : Direction ; quantity : Int ;
+} datatype Vacancy { 
+	attributes : vacancyDirection1 : VacancyDirection ; vacancyDirection2 : VacancyDirection ;
+} datatype TicketData { 
+	attributes : id : Int ; entryTimestamp : Int ; plate : String ;
+} value type Matrix { 
+	
+} datatype UserTouchInput { 
+	attributes : xPosition : Int ; yPosition : Int ;
+} datatype VideoFrame { 
+	attributes : positionX : Int ; positionY : Int ; r : Int ; g : Int ; b : Int ;
+} datatype ParkingSpaceStatus { 
+	attributes : parkingSpotId : Int ; occupied : Boolean ;
+} datatype VehicleInfo { 
+	attributes : plate : String ; authorized : Boolean ;
+} datatype ParkingBarrierStatus { 
+	attributes : status : ParkingBarrierStatus ;
+} datatype ParkingBarrierCommand { 
+	attributes : command : ParkingBarrierCommand ;
+} datatype TransactionStatus { 
+	attributes : transactionStatus : TransactionStatus ;
+} }
 
 Requirement ControleDeEstacionamentoFR (0) {
     text = "Sistema Completo"
@@ -40,16 +70,85 @@ Requirement PagarComDebitoFR ( 11 ) { text="Permite que o usuário realize o pag
 Requirement PagarComPixFR ( 12 ) { text="Permite que o usuário realize o pagamento do estacionamento por meio de Pix."} 
 Requirement AbrirCancelaFR ( 14 ) { text="Aciona a abertura da cancela do estacionamento para permitir a entrada ou saída de veículos."} 
 Requirement FecharCancelaFR ( 15 ) { text="Aciona o fechamento da cancela após a passagem do veículo, garantindo o controle de acesso e segurança."} 
-package SmartParkingConnectors { import SmartParkingComponents ; import ParkingBarrierStatus ; connector def VideoFeedCN { participants : ~ target : VideoFeedIPT ; ~ source : VideoFeedOPT ; flows : VideoFrame from source to target } connector def PrintTicketButtonCN { participants : ~ target : PrintTicketButtonIPT ; ~ source : PrintTicketOPT ; flows : Void from source to target } connector def ParkingSpaceStatusCN { participants : ~ target : VehiclePresenceIPT ; ~ source : VehiclePresenceOPT ; flows : ParkingSpaceStatus from source to target } connector def TicketDataCN { participants : ~ target : TicketDataIPT ; ~ source : TicketDataOPT ; flows : TicketData from source to target } connector def VacancyCN { participants : ~ target : VacancyIPT ; ~ source : VacancyOPT ; flows : Vacancy from source to target } connector def VehicleInfoCN { participants : ~ target : VehicleInfoIPT ; ~ source : VehicleInfoOPT ; flows : VehicleInfo from source to target } connector def UserTouchInputCN { participants : ~ target : UserTouchIPT ; ~ source : UserTouchOPT ; flows : VehicleInfo from source to target } connector def PaymentInfoCN { participants : ~ target : PaymentInfoIPT ; ~ source : PaymentInfoOPT ; flows : PaymentInfo from source to target } connector def ParkingBarrierCommandCN { participants : ~ target : ParkingBarrierCommandIPT ; ~ source : ParkingBarrierCommandOPT ; flows : ParkingBarrierCommand from source to target } connector def ParkingBarrierStatus { participants : ~ target : ParkingBarrierStatusIPT ; ~ source : ParkingBarrierStatusOPT ; flows : ParkingBarrierStatus from source to target } connector def newConnector { participants : ~ target : TransactionStatusIPT ; ~ newPort : TransactionStatusOPT ; flows : TransactionStatus from newPort to target } } package SmartParkingComponents { import ParkingBarrierStatus ; import SysADL.types ;
-	component def TotemCP { ports : infos : PaymentInfoOPT ; ticket : TicketDataIPT ; transaction : TransactionStatusIPT ; transaction : TransactionStatusOPT ; }
-	component def PaymentMachineCP { ports : paymentInfo : PaymentInfoIPT ; newPort : TransactionStatusOPT ; }
-	component def ParkingBarrierCP { ports : command : ParkingBarrierCommandIPT ; barrierStatus : ParkingBarrierStatusOPT ; vehicleInfo : VehicleInfoIPT ; } boundary
+package SmartParkingConnectors { 
+	import SmartParkingComponents ; 
+	import ParkingBarrierStatus ; 
+	connector def VideoFeedCN { 
+		participants : ~ target : VideoFeedIPT ; ~ source : VideoFeedOPT ; flows : VideoFrame from source to target
+	} connector def PrintTicketButtonCN { 
+		participants : ~ target : PrintTicketButtonIPT ; ~ source : PrintTicketOPT ; flows : Void from source to target
+	} connector def ParkingSpaceStatusCN { 
+		participants : ~ target : VehiclePresenceIPT ; ~ source : VehiclePresenceOPT ; flows : ParkingSpaceStatus from source to target
+	} connector def TicketDataCN { 
+		participants : ~ target : TicketDataIPT ; ~ source : TicketDataOPT ; flows : TicketData from source to target
+	} connector def VacancyCN { 
+		participants : ~ target : VacancyIPT ; ~ source : VacancyOPT ; flows : Vacancy from source to target
+	} connector def VehicleInfoCN { 
+		participants : ~ target : VehicleInfoIPT ; ~ source : VehicleInfoOPT ; flows : VehicleInfo from source to target 
+		connector def newElement { }
+	} connector def UserTouchInputCN { 
+		participants : ~ target : UserTouchIPT ; ~ source : UserTouchOPT ; flows : VehicleInfo from source to target
+	} connector def PaymentInfoCN { 
+		participants : ~ target : PaymentInfoIPT ; ~ source : PaymentInfoOPT ; flows : PaymentInfo from source to target
+	} connector def ParkingBarrierCommandCN { 
+		participants : ~ target : ParkingBarrierCommandIPT ; ~ source : ParkingBarrierCommandOPT ; flows : ParkingBarrierCommand from source to target
+	} connector def ParkingBarrierStatus { 
+		participants : ~ target : ParkingBarrierStatusIPT ; ~ source : ParkingBarrierStatusOPT ; flows : ParkingBarrierStatus from source to target
+	} connector def newConnector { 
+		participants : ~ target : TransactionStatusIPT ; ~ newPort : TransactionStatusOPT ; flows : TransactionStatus from newPort to target
+	}
+} 
+package SmartParkingComponents { import ParkingBarrierStatus ; import SysADL.types ;
+	component def TotemCP { 
+		ports : infos : PaymentInfoOPT ; ticket : TicketDataIPT ; transaction : TransactionStatusIPT ; transaction : TransactionStatusOPT ;
+	}
+	component def PaymentMachineCP { 
+		ports : paymentInfo : PaymentInfoIPT ; newPort : TransactionStatusOPT ;
+	}
+	component def ParkingBarrierCP { 
+		ports : command : ParkingBarrierCommandIPT ; barrierStatus : ParkingBarrierStatusOPT ; vehicleInfo : VehicleInfoIPT ;
+	} boundary
 	component def TicketButton { ports : printCommand : PrintTicketOPT ; }
 	component def TicketPrinter { ports : printCommand : PrintTicketButtonIPT ; } boundary
 	component def DisplayPanel { ports : vacancies : VacancyIPT ; } boundary
 	component def CameraCP { ports : video : VideoFeedOPT ; }
-	component def SmartParkingSystem { configuration { } } boundary
+	component def SmartParkingSystem { 
+		configuration { 
+			components : C1 : CentralCP { 
+				using ports : video : VideoFeedIPT ; newPort : VehicleInfoOPT ; vacancies : VacancyOPT ; ticket : TicketDataIPT ;
+			} barrierEntrada : ParkingBarrierCP { 
+				using ports : command : ParkingBarrierCommandIPT ; barrierStatus : ParkingBarrierStatusOPT ; vehicleInfo : VehicleInfoIPT ;
+			} tbEntrada : TicketButton { 
+				using ports : printCommand : PrintTicketOPT ;
+			} tpEntrada : TicketPrinter { using ports : printCommand : PrintTicketButtonIPT ; }
+		ps : PresenceSensorCP { using ports : presence : VehiclePresenceOPT ; } DisplayPanel : DisplayPanel { using ports : vacancies : VacancyIPT ; } led : LEDIndicatorCP { using ports : vehiclePresence : VehiclePresenceIPT ; } trSaida : TicketReaderCP { using ports : ticket : TicketDataOPT ; } TotemCP : TotemCP { using ports : infos : PaymentInfoOPT ; ticket : TicketDataIPT ; transaction : TransactionStatusIPT ; transaction : TransactionStatusOPT ; } PaymentMachineCP : PaymentMachineCP { using ports : paymentInfo : PaymentInfoIPT ; newPort : TransactionStatusOPT ; } trTotem : TicketReaderCP { using ports : ticket : TicketDataOPT ; } camEntrada : CameraCP { using ports : video : VideoFeedOPT ; } camSaida : CameraCP { using ports : video : VideoFeedOPT ; } saida : ParkingBarrierCP { using ports : command : ParkingBarrierCommandIPT ; barrierStatus : ParkingBarrierStatusOPT ; vehicleInfo : VehicleInfoIPT ; } }
+	} boundary
 	component def LEDIndicatorCP { ports : vehiclePresence : VehiclePresenceIPT ; } boundary
 	component def TicketReaderCP { ports : ticket : TicketDataOPT ; } boundary
 	component def PresenceSensorCP { ports : presence : VehiclePresenceOPT ; }
-	component def CentralCP { ports : video : VideoFeedIPT ; newPort : VehicleInfoOPT ; vacancies : VacancyOPT ; ticket : TicketDataIPT ; } } package ParkingBarrierStatus { import SysADL.types ; port def VehiclePresenceOPT { flow out ParkingSpaceStatus } port def VideoFeedOPT { flow out VideoFrame } port def VehiclePresenceIPT { flow in ParkingSpaceStatus } port def VideoFeedIPT { flow in VideoFrame } port def TicketDataIPT { flow in TicketData } port def TicketDataOPT { flow out TicketData } port def VehicleInfoIPT { flow in VehicleInfo } port def VehicleInfoOPT { flow out VehicleInfo } port def UserTouchIPT { flow in UserTouchInput } port def UserTouchOPT { flow in VehicleInfo } port def PaymentInfoOPT { flow in PaymentInfo } port def PaymentInfoIPT { flow in PaymentInfo } port def VacancyIPT { flow in Vacancy } port def VacancyOPT { flow inout Vacancy } port def PrintTicketButtonIPT { flow in Void } port def PrintTicketOPT { flow out Void } port def ParkingBarrierCommandIPT { flow in ParkingBarrierCommand } port def ParkingBarrierCommandOPT { flow out ParkingBarrierCommand } port def ParkingBarrierStatusIPT { flow in ParkingBarrierStatus } port def ParkingBarrierStatusOPT { flow out ParkingBarrierStatus } port def TransactionStatusOPT { flow out TransactionStatus } port def TransactionStatusIPT { flow in TransactionStatus } }
+	component def CentralCP { ports : video : VideoFeedIPT ; newPort : VehicleInfoOPT ; vacancies : VacancyOPT ; ticket : TicketDataIPT ; } } 
+	package ParkingBarrierStatus { 
+		import SysADL.types ; 
+		port def VehiclePresenceOPT { flow out ParkingSpaceStatus } 
+		port def VideoFeedOPT { flow out VideoFrame } 
+		port def VehiclePresenceIPT { flow in ParkingSpaceStatus } 
+		port def VideoFeedIPT { flow in VideoFrame } 
+		port def TicketDataIPT { flow in TicketData } 
+		port def TicketDataOPT { flow out TicketData } 
+		port def VehicleInfoIPT { flow in VehicleInfo } 
+		port def VehicleInfoOPT { flow out VehicleInfo } 
+		port def UserTouchIPT { flow in UserTouchInput } 
+		port def UserTouchOPT { flow in VehicleInfo } 
+		port def PaymentInfoOPT { flow in PaymentInfo } 
+		port def PaymentInfoIPT { flow in PaymentInfo } 
+		port def VacancyIPT { flow in Vacancy } 
+		port def VacancyOPT { flow inout Vacancy } 
+		port def PrintTicketButtonIPT { flow in Void } 
+		port def PrintTicketOPT { flow out Void } 
+		port def ParkingBarrierCommandIPT { flow in ParkingBarrierCommand } 
+		port def ParkingBarrierCommandOPT { flow out ParkingBarrierCommand } 
+		port def ParkingBarrierStatusIPT { flow in ParkingBarrierStatus } 
+		port def ParkingBarrierStatusOPT { flow out ParkingBarrierStatus } 
+		port def TransactionStatusOPT { flow out TransactionStatus } 
+		port def TransactionStatusIPT { flow in TransactionStatus }
+	}
