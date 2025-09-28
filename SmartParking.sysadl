@@ -12,27 +12,35 @@ Requirement ControleDeEstacionamentoFR (0) {
     text = "Sistema Completo"
 
     Requirement GerenciarAcessoVeicularFR (1) {
-        text = "" derive AbrirCancelaFR , FecharCancelaFR , EmitirTicketFR ;
+        text = "Permite o controle de entrada de veículos no estacionamento. Abrange abertura e fechamento de cancelas e a emissão de tickets para acesso." derive AbrirCancelaFR , FecharCancelaFR , EmitirTicketFR ;
 
-        Requirement GerenciarAcessoComPlanoFR (6) { }
+        Requirement GerenciarAcessoComPlanoFR (6) {text = "Controla a entrada de veículos vinculados a planos mensais ou recorrentes, permitindo acesso sem a necessidade de ticket." }
         
-        Requirement GerenciarAcessoPessoasAutorizadasFR (7) { derive FecharCancelaFR ; }
+        Requirement GerenciarAcessoPessoasAutorizadasFR (7) { text="Gerencia a entrada de veículos cadastrados previamente como autorizados, garantindo acesso automatizado e seguro." derive FecharCancelaFR ; }
         
-        Requirement GerenciarAcessoComTicketFR (8) { derive GerenciarSaidaVeicularFR , LerTicketFR ; }
+        Requirement GerenciarAcessoComTicketFR (8) { text= "Permite a entrada de veículos com base na emissão e posterior leitura de tickets, integrando com o processo de saída." derive GerenciarSaidaVeicularFR , LerTicketFR ; }
     }
 
     Requirement GerenciarPagamentoFR (2) {
-        text = ""
+        text = "Responsável pelo processamento dos pagamentos referentes ao uso do estacionamento. Permite diferentes formas de pagamento, como crédito, débito e Pix, a partir da leitura do ticket."
         
     derive LerTicketFR , PagarComCreditoFR , PagarComDebitoFR , PagarComPixFR ; }
 
-    Requirement GerenciarVagasFR (3) { }
+    Requirement GerenciarVagasFR (3) { text="Monitora e controla a disponibilidade de vagas no estacionamento, atualizando em tempo real."}
 
-    Requirement MonitorarDeslocamentoVeiculosFR (4) { }
+    Requirement MonitorarDeslocamentoVeiculosFR (4) { text="Acompanha o deslocamento de veículos dentro do estacionamento, possibilitando maior segurança e controle operacional."}
 
-    Requirement LerPlacasDosVeiculosFR (5) { }
+    Requirement LerPlacasDosVeiculosFR (5) { text="Realiza a leitura automática das placas dos veículos, na entrada e saida de veiculos."}
 
-Requirement GerenciarSaidaVeicularFR ( 13 ) { derive AbrirCancelaFR , FecharCancelaFR ; } } Requirement EmitirTicketFR ( 16 ) { } Requirement LerTicketFR ( 9 ) { } Requirement PagarComCreditoFR ( 10 ) { } Requirement PagarComDebitoFR ( 11 ) { } Requirement PagarComPixFR ( 12 ) { } Requirement AbrirCancelaFR ( 14 ) { } Requirement FecharCancelaFR ( 15 ) { } package SmartParkingConnectors { import SmartParkingComponents ; import ParkingBarrierStatus ; connector def VideoFeedCN { participants : ~ target : VideoFeedIPT ; ~ source : VideoFeedOPT ; flows : VideoFrame from source to target } connector def PrintTicketButtonCN { participants : ~ target : PrintTicketButtonIPT ; ~ source : PrintTicketOPT ; flows : Void from source to target } connector def ParkingSpaceStatusCN { participants : ~ target : VehiclePresenceIPT ; ~ source : VehiclePresenceOPT ; flows : ParkingSpaceStatus from source to target } connector def TicketDataCN { participants : ~ target : TicketDataIPT ; ~ source : TicketDataOPT ; flows : TicketData from source to target } connector def VacancyCN { participants : ~ target : VacancyIPT ; ~ source : VacancyOPT ; flows : Vacancy from source to target } connector def VehicleInfoCN { participants : ~ target : VehicleInfoIPT ; ~ source : VehicleInfoOPT ; flows : VehicleInfo from source to target } connector def UserTouchInputCN { participants : ~ target : UserTouchIPT ; ~ source : UserTouchOPT ; flows : VehicleInfo from source to target } connector def PaymentInfoCN { participants : ~ target : PaymentInfoIPT ; ~ source : PaymentInfoOPT ; flows : PaymentInfo from source to target } connector def ParkingBarrierCommandCN { participants : ~ target : ParkingBarrierCommandIPT ; ~ source : ParkingBarrierCommandOPT ; flows : ParkingBarrierCommand from source to target } connector def ParkingBarrierStatus { participants : ~ target : ParkingBarrierStatusIPT ; ~ source : ParkingBarrierStatusOPT ; flows : ParkingBarrierStatus from source to target } connector def newConnector { participants : ~ target : TransactionStatusIPT ; ~ newPort : TransactionStatusOPT ; flows : TransactionStatus from newPort to target } } package SmartParkingComponents { import ParkingBarrierStatus ; import SysADL.types ;
+Requirement GerenciarSaidaVeicularFR ( 13 ) { text = "Gerencia o processo de saída dos veículos, garantindo a verificação de pagamento, leitura de ticket quando aplicável, e acionamento das cancelas." derive AbrirCancelaFR , FecharCancelaFR ; } } 
+Requirement EmitirTicketFR ( 16 ) { text="Emite tickets no momento da entrada de veículos, contendo informações necessárias para o cálculo posterior de tarifas e validação de saída."} 
+Requirement LerTicketFR ( 9 ) { text="Faz a leitura dos tickets apresentados pelos motoristas para fins de cálculo do pagamento e validação da saída do veículo."} 
+Requirement PagarComCreditoFR ( 10 ) { text="Permite que o usuário realize o pagamento do estacionamento utilizando cartão de crédito."} 
+Requirement PagarComDebitoFR ( 11 ) { text="Permite que o usuário realize o pagamento do estacionamento utilizando cartão de débito."} 
+Requirement PagarComPixFR ( 12 ) { text="Permite que o usuário realize o pagamento do estacionamento por meio de Pix."} 
+Requirement AbrirCancelaFR ( 14 ) { text="Aciona a abertura da cancela do estacionamento para permitir a entrada ou saída de veículos."} 
+Requirement FecharCancelaFR ( 15 ) { text="Aciona o fechamento da cancela após a passagem do veículo, garantindo o controle de acesso e segurança."} 
+package SmartParkingConnectors { import SmartParkingComponents ; import ParkingBarrierStatus ; connector def VideoFeedCN { participants : ~ target : VideoFeedIPT ; ~ source : VideoFeedOPT ; flows : VideoFrame from source to target } connector def PrintTicketButtonCN { participants : ~ target : PrintTicketButtonIPT ; ~ source : PrintTicketOPT ; flows : Void from source to target } connector def ParkingSpaceStatusCN { participants : ~ target : VehiclePresenceIPT ; ~ source : VehiclePresenceOPT ; flows : ParkingSpaceStatus from source to target } connector def TicketDataCN { participants : ~ target : TicketDataIPT ; ~ source : TicketDataOPT ; flows : TicketData from source to target } connector def VacancyCN { participants : ~ target : VacancyIPT ; ~ source : VacancyOPT ; flows : Vacancy from source to target } connector def VehicleInfoCN { participants : ~ target : VehicleInfoIPT ; ~ source : VehicleInfoOPT ; flows : VehicleInfo from source to target } connector def UserTouchInputCN { participants : ~ target : UserTouchIPT ; ~ source : UserTouchOPT ; flows : VehicleInfo from source to target } connector def PaymentInfoCN { participants : ~ target : PaymentInfoIPT ; ~ source : PaymentInfoOPT ; flows : PaymentInfo from source to target } connector def ParkingBarrierCommandCN { participants : ~ target : ParkingBarrierCommandIPT ; ~ source : ParkingBarrierCommandOPT ; flows : ParkingBarrierCommand from source to target } connector def ParkingBarrierStatus { participants : ~ target : ParkingBarrierStatusIPT ; ~ source : ParkingBarrierStatusOPT ; flows : ParkingBarrierStatus from source to target } connector def newConnector { participants : ~ target : TransactionStatusIPT ; ~ newPort : TransactionStatusOPT ; flows : TransactionStatus from newPort to target } } package SmartParkingComponents { import ParkingBarrierStatus ; import SysADL.types ;
 	component def TotemCP { ports : infos : PaymentInfoOPT ; ticket : TicketDataIPT ; transaction : TransactionStatusIPT ; transaction : TransactionStatusOPT ; }
 	component def PaymentMachineCP { ports : paymentInfo : PaymentInfoIPT ; newPort : TransactionStatusOPT ; }
 	component def ParkingBarrierCP { ports : command : ParkingBarrierCommandIPT ; barrierStatus : ParkingBarrierStatusOPT ; vehicleInfo : VehicleInfoIPT ; } boundary
