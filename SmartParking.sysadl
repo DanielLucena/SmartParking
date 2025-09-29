@@ -100,16 +100,16 @@ package SmartParkingConnectors {
 } 
 package SmartParkingComponents { import ParkingBarrierStatus ; import SysADL.types ;
 	component def TotemCP { 
-		ports : infos : PaymentInfoOPT ; ticket : TicketDataIPT ; transaction : TransactionStatusIPT ; transaction : TransactionStatusOPT ;
-	}
+		ports : infos : PaymentInfoOPT ; ticket : TicketDataIPT ; transaction : TransactionStatusIPT ; 
+	vehicleInfo : VehicleInfoOPT ; }
 	component def PaymentMachineCP { 
-		ports : paymentInfo : PaymentInfoIPT ; newPort : TransactionStatusOPT ;
+		ports : paymentInfo : PaymentInfoIPT ; transaction : TransactionStatusOPT ;
 	}
 	component def ParkingBarrierCP { 
-		ports : command : ParkingBarrierCommandIPT ; barrierStatus : ParkingBarrierStatusOPT ; vehicleInfo : VehicleInfoIPT ;
+		ports : command : ParkingBarrierCommandIPT ; barrierStatus : ParkingBarrierStatusOPT ; 
 	} boundary
 	component def TicketButton { ports : printCommand : PrintTicketOPT ; }
-	component def TicketPrinter { ports : printCommand : PrintTicketButtonIPT ; } boundary
+	component def TicketPrinter { ports :  ticket : TicketDataIPT ; } boundary
 	component def DisplayPanel { ports : vacancies : VacancyIPT ; } boundary
 	component def CameraCP { ports : video : VideoFeedOPT ; }
 	component def SmartParkingSystem { 
@@ -126,7 +126,7 @@ package SmartParkingComponents { import ParkingBarrierStatus ; import SysADL.typ
 	component def LEDIndicatorCP { ports : vehiclePresence : VehiclePresenceIPT ; } boundary
 	component def TicketReaderCP { ports : ticket : TicketDataOPT ; } boundary
 	component def PresenceSensorCP { ports : presence : VehiclePresenceOPT ; }
-	component def CentralCP { ports : video : VideoFeedIPT ; newPort : VehicleInfoOPT ; vacancies : VacancyOPT ; ticket : TicketDataIPT ; } } 
+	component def CentralCP { ports : video : VideoFeedIPT ; newPort : VehicleInfoOPT ; vacancies : VacancyOPT ; ticketIn : TicketDataIPT ; command : ParkingBarrierCommandOPT ; vehicleInfoIn : VehicleInfoIPT ; printCmdIn : PrintTicketButtonIPT ; vehiclePresence : VehiclePresenceIPT ; ticketOut : TicketDataOPT ; } } 
 	package ParkingBarrierStatus { 
 		import SysADL.types ; 
 		port def VehiclePresenceOPT { flow out ParkingSpaceStatus } 
