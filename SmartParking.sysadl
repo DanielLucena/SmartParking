@@ -94,8 +94,8 @@ package SmartParkingConnectors {
 		participants : ~ target : ParkingBarrierCommandIPT ; ~ source : ParkingBarrierCommandOPT ; flows : ParkingBarrierCommand from source to target
 	} connector def ParkingBarrierStatus { 
 		participants : ~ target : ParkingBarrierStatusIPT ; ~ source : ParkingBarrierStatusOPT ; flows : ParkingBarrierStatus from source to target
-	} connector def newConnector { 
-		participants : ~ target : TransactionStatusIPT ; ~ newPort : TransactionStatusOPT ; flows : TransactionStatus from newPort to target
+	} connector def TransactionStatusCN { 
+		participants : ~ target : TransactionStatusIPT ; ~ source : TransactionStatusOPT ; flows : TransactionStatus from source to target
 	}
 } 
 package SmartParkingComponents { import ParkingBarrierStatus ; import SysADL.types ;
@@ -114,19 +114,13 @@ package SmartParkingComponents { import ParkingBarrierStatus ; import SysADL.typ
 	component def CameraCP { ports : video : VideoFeedOPT ; }
 	component def SmartParkingSystem { 
 		configuration { 
-			components : C1 : CentralCP { 
-				using ports : video : VideoFeedIPT ; newPort : VehicleInfoOPT ; vacancies : VacancyOPT ; ticket : TicketDataIPT ;
-			} barrierEntrada : ParkingBarrierCP { 
-				using ports : command : ParkingBarrierCommandIPT ; barrierStatus : ParkingBarrierStatusOPT ; vehicleInfo : VehicleInfoIPT ;
-			} tbEntrada : TicketButton { 
-				using ports : printCommand : PrintTicketOPT ;
-			} tpEntrada : TicketPrinter { using ports : printCommand : PrintTicketButtonIPT ; }
-		ps : PresenceSensorCP { using ports : presence : VehiclePresenceOPT ; } DisplayPanel : DisplayPanel { using ports : vacancies : VacancyIPT ; } led : LEDIndicatorCP { using ports : vehiclePresence : VehiclePresenceIPT ; } trSaida : TicketReaderCP { using ports : ticket : TicketDataOPT ; } TotemCP : TotemCP { using ports : infos : PaymentInfoOPT ; ticket : TicketDataIPT ; transaction : TransactionStatusIPT ; transaction : TransactionStatusOPT ; } PaymentMachineCP : PaymentMachineCP { using ports : paymentInfo : PaymentInfoIPT ; newPort : TransactionStatusOPT ; } trTotem : TicketReaderCP { using ports : ticket : TicketDataOPT ; } camEntrada : CameraCP { using ports : video : VideoFeedOPT ; } camSaida : CameraCP { using ports : video : VideoFeedOPT ; } saida : ParkingBarrierCP { using ports : command : ParkingBarrierCommandIPT ; barrierStatus : ParkingBarrierStatusOPT ; vehicleInfo : VehicleInfoIPT ; } }
+			components :    
+		          CentralCP : CentralCP { using ports : video : VideoFeedIPT ; vehicleInfoOut : VehicleInfoOPT ; vacancies : VacancyOPT ; ticketIn : TicketDataIPT ; command : ParkingBarrierCommandOPT ; vehicleInfoIn : VehicleInfoIPT ; printCmdIn : PrintTicketButtonIPT ; vehiclePresence : VehiclePresenceIPT ; ticketOut : TicketDataOPT ; } }
 	} boundary
 	component def LEDIndicatorCP { ports : vehiclePresence : VehiclePresenceIPT ; } boundary
 	component def TicketReaderCP { ports : ticket : TicketDataOPT ; } boundary
 	component def PresenceSensorCP { ports : presence : VehiclePresenceOPT ; }
-	component def CentralCP { ports : video : VideoFeedIPT ; newPort : VehicleInfoOPT ; vacancies : VacancyOPT ; ticketIn : TicketDataIPT ; command : ParkingBarrierCommandOPT ; vehicleInfoIn : VehicleInfoIPT ; printCmdIn : PrintTicketButtonIPT ; vehiclePresence : VehiclePresenceIPT ; ticketOut : TicketDataOPT ; } } 
+	component def CentralCP { ports : video : VideoFeedIPT ; vehicleInfoOut : VehicleInfoOPT ; vacancies : VacancyOPT ; ticketIn : TicketDataIPT ; command : ParkingBarrierCommandOPT ; vehicleInfoIn : VehicleInfoIPT ; printCmdIn : PrintTicketButtonIPT ; vehiclePresence : VehiclePresenceIPT ; ticketOut : TicketDataOPT ; } } 
 	package ParkingBarrierStatus { 
 		import SysADL.types ; 
 		port def VehiclePresenceOPT { flow out ParkingSpaceStatus } 
