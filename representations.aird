@@ -23,7 +23,7 @@
         <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/org.sysadl.viewpoints/description/SysADL_vp.odesign#//@ownedViewpoints[name='SysADL.Structural']/@ownedRepresentations[name='SysADL.BDD']"/>
         <target xmi:type="sysadl:Package" href="SmartParking.sysadl#//@packages[name='SmartParkingConnectors']"/>
       </ownedRepresentationDescriptors>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_pZn9sJvUEfC0pZ10YiDK8A" name="Block Definition Diagram (Structural BDD)" repPath="#_pZmvkJvUEfC0pZ10YiDK8A" changeId="1763672493854">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_pZn9sJvUEfC0pZ10YiDK8A" name="Block Definition Diagram (Structural BDD)" repPath="#_pZmvkJvUEfC0pZ10YiDK8A" changeId="1763672903812">
         <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/org.sysadl.viewpoints/description/SysADL_vp.odesign#//@ownedViewpoints[name='SysADL.Structural']/@ownedRepresentations[name='SysADL.BDD']"/>
         <target xmi:type="sysadl:Package" href="SmartParking.sysadl#//@packages[name='SmartParkingComponents']"/>
       </ownedRepresentationDescriptors>
@@ -42,6 +42,10 @@
       <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_ytrMAMZSEfC0Xo-FjT6mnQ" name="Section (Structural IBD)" repPath="#_ytp94MZSEfC0Xo-FjT6mnQ" changeId="1763672582245">
         <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/org.sysadl.viewpoints/description/SysADL_vp.odesign#//@ownedViewpoints[name='SysADL.Structural']/@ownedRepresentations[name='SysADL.IBD']"/>
         <target xmi:type="sysadl:Configuration" href="SmartParking.sysadl#//@packages[name='SmartParkingComponents']/@definitions[name='Section']/@composite"/>
+      </ownedRepresentationDescriptors>
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_n45v8MZUEfC0Xo-FjT6mnQ" name="SmartParkingSystem (Structural IBD)" repPath="#_n45I4MZUEfC0Xo-FjT6mnQ" changeId="1763673069164">
+        <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/org.sysadl.viewpoints/description/SysADL_vp.odesign#//@ownedViewpoints[name='SysADL.Structural']/@ownedRepresentations[name='SysADL.IBD']"/>
+        <target xmi:type="sysadl:Configuration" href="SmartParking.sysadl#//@packages[name='SmartParkingComponents']/@definitions[name='SmartParkingSystem']/@composite"/>
       </ownedRepresentationDescriptors>
     </ownedViews>
     <ownedViews xmi:type="viewpoint:DView" uid="_cMTCQI5WEfCOnszQIScINw">
@@ -5958,6 +5962,17 @@
                 <styles xmi:type="notation:ShapeStyle" xmi:id="_JZKfocVaEfC6SLLL3Srv8Q" fontName="Segoe UI" fontHeight="8"/>
                 <layoutConstraint xmi:type="notation:Bounds" xmi:id="_JZKfosVaEfC6SLLL3Srv8Q" x="-12" y="86" width="20" height="20"/>
               </children>
+              <children xmi:type="notation:Node" xmi:id="_-krkUMZUEfC0Xo-FjT6mnQ" type="3012" element="_-kaemcZUEfC0Xo-FjT6mnQ">
+                <children xmi:type="notation:Node" xmi:id="_-krkU8ZUEfC0Xo-FjT6mnQ" type="5010">
+                  <layoutConstraint xmi:type="notation:Location" xmi:id="_-krkVMZUEfC0Xo-FjT6mnQ" x="21" y="3"/>
+                </children>
+                <children xmi:type="notation:Node" xmi:id="_-ksLYMZUEfC0Xo-FjT6mnQ" type="3003" element="_-kaemsZUEfC0Xo-FjT6mnQ">
+                  <styles xmi:type="notation:ShapeStyle" xmi:id="_-ksLYcZUEfC0Xo-FjT6mnQ" fontName="Segoe UI"/>
+                  <layoutConstraint xmi:type="notation:Bounds" xmi:id="_-ksLYsZUEfC0Xo-FjT6mnQ"/>
+                </children>
+                <styles xmi:type="notation:ShapeStyle" xmi:id="_-krkUcZUEfC0Xo-FjT6mnQ" fontName="Segoe UI" fontHeight="8"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_-krkUsZUEfC0Xo-FjT6mnQ" x="199" y="106" width="20" height="20"/>
+              </children>
               <children xmi:type="notation:Node" xmi:id="_MlDTIMO1EfCFL7FM90m-0Q" type="5004"/>
               <children xmi:type="notation:Node" xmi:id="_MlDTIcO1EfCFL7FM90m-0Q" type="7003">
                 <styles xmi:type="notation:SortingStyle" xmi:id="_MlDTIsO1EfCFL7FM90m-0Q"/>
@@ -6711,6 +6726,86 @@
           <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_GHfq9sZUEfC0Xo-FjT6mnQ" id="(0.5,0.5)"/>
           <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_GHfq98ZUEfC0Xo-FjT6mnQ" id="(0.5,0.5)"/>
         </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_sM4toMZUEfC0Xo-FjT6mnQ" type="4001" element="_sMxZMcZUEfC0Xo-FjT6mnQ" source="_ZC0R4JvVEfC0pZ10YiDK8A" target="_W5QGQMW3EfC7_s7YFC14Pg">
+          <children xmi:type="notation:Node" xmi:id="_sM5UsMZUEfC0Xo-FjT6mnQ" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_sM5UscZUEfC0Xo-FjT6mnQ" y="-10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_sM5UssZUEfC0Xo-FjT6mnQ" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_sM5Us8ZUEfC0Xo-FjT6mnQ" y="10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_sM5UtMZUEfC0Xo-FjT6mnQ" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_sM5UtcZUEfC0Xo-FjT6mnQ" y="10"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_sM4tocZUEfC0Xo-FjT6mnQ"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_sM4tosZUEfC0Xo-FjT6mnQ" fontName="Segoe UI" fontHeight="8"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_sM4to8ZUEfC0Xo-FjT6mnQ" points="[0, 0, -1057, -749]$[1057, 749, 0, 0]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_sM5UtsZUEfC0Xo-FjT6mnQ" id="(0.5,0.5)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_sM5Ut8ZUEfC0Xo-FjT6mnQ" id="(0.5,0.5)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_uSM0UMZUEfC0Xo-FjT6mnQ" type="4001" element="_uSFf5MZUEfC0Xo-FjT6mnQ" source="_ZC0R4JvVEfC0pZ10YiDK8A" target="_9ciegMW6EfC7_s7YFC14Pg">
+          <children xmi:type="notation:Node" xmi:id="_uSNbYMZUEfC0Xo-FjT6mnQ" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_uSNbYcZUEfC0Xo-FjT6mnQ" y="-10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_uSNbYsZUEfC0Xo-FjT6mnQ" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_uSNbY8ZUEfC0Xo-FjT6mnQ" y="10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_uSNbZMZUEfC0Xo-FjT6mnQ" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_uSNbZcZUEfC0Xo-FjT6mnQ" y="10"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_uSM0UcZUEfC0Xo-FjT6mnQ"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_uSM0UsZUEfC0Xo-FjT6mnQ" fontName="Segoe UI" fontHeight="8"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_uSM0U8ZUEfC0Xo-FjT6mnQ" points="[0, 0, 81, -755]$[-81, 755, 0, 0]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_uSNbZsZUEfC0Xo-FjT6mnQ" id="(0.5,0.5)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_uSNbZ8ZUEfC0Xo-FjT6mnQ" id="(0.5,0.5)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_wyaHQMZUEfC0Xo-FjT6mnQ" type="4001" element="_wySLyMZUEfC0Xo-FjT6mnQ" source="_ZC0R4JvVEfC0pZ10YiDK8A" target="__zRkkMY3EfCn8IVfTXUxdQ">
+          <children xmi:type="notation:Node" xmi:id="_wyaHRMZUEfC0Xo-FjT6mnQ" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_wyaHRcZUEfC0Xo-FjT6mnQ" y="-10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_wyaHRsZUEfC0Xo-FjT6mnQ" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_wyaHR8ZUEfC0Xo-FjT6mnQ" y="10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_wyaHSMZUEfC0Xo-FjT6mnQ" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_wyaHScZUEfC0Xo-FjT6mnQ" y="10"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_wyaHQcZUEfC0Xo-FjT6mnQ"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_wyaHQsZUEfC0Xo-FjT6mnQ" fontName="Segoe UI" fontHeight="8"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_wyaHQ8ZUEfC0Xo-FjT6mnQ" points="[0, 0, -699, -295]$[638, 269, -61, -26]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_wyaHSsZUEfC0Xo-FjT6mnQ" id="(0.5,0.5)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_wyaHS8ZUEfC0Xo-FjT6mnQ" id="(0.5,0.5)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_x_84cMZUEfC0Xo-FjT6mnQ" type="4001" element="_x_09CcZUEfC0Xo-FjT6mnQ" source="_ZC0R4JvVEfC0pZ10YiDK8A" target="_tVteQMZREfC0Xo-FjT6mnQ">
+          <children xmi:type="notation:Node" xmi:id="_x_9fgMZUEfC0Xo-FjT6mnQ" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_x_9fgcZUEfC0Xo-FjT6mnQ" y="-10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_x_9fgsZUEfC0Xo-FjT6mnQ" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_x_9fg8ZUEfC0Xo-FjT6mnQ" y="10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_x_9fhMZUEfC0Xo-FjT6mnQ" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_x_9fhcZUEfC0Xo-FjT6mnQ" y="10"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_x_84ccZUEfC0Xo-FjT6mnQ"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_x_84csZUEfC0Xo-FjT6mnQ" fontName="Segoe UI" fontHeight="8"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_x_84c8ZUEfC0Xo-FjT6mnQ" points="[0, 0, 603, -139]$[-603, 139, 0, 0]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_x_9fhsZUEfC0Xo-FjT6mnQ" id="(0.5,0.5)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_x_9fh8ZUEfC0Xo-FjT6mnQ" id="(0.5,0.5)"/>
+        </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_DNLZfMZVEfC0Xo-FjT6mnQ" type="4001" element="_DNBozMZVEfC0Xo-FjT6mnQ" source="_ZC0R4JvVEfC0pZ10YiDK8A" target="_MlCsEMO1EfCFL7FM90m-0Q">
+          <children xmi:type="notation:Node" xmi:id="_DNMAgMZVEfC0Xo-FjT6mnQ" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_DNMAgcZVEfC0Xo-FjT6mnQ" y="-10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_DNMAgsZVEfC0Xo-FjT6mnQ" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_DNMAg8ZVEfC0Xo-FjT6mnQ" y="10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_DNMAhMZVEfC0Xo-FjT6mnQ" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_DNMAhcZVEfC0Xo-FjT6mnQ" y="10"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_DNLZfcZVEfC0Xo-FjT6mnQ"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_DNLZfsZVEfC0Xo-FjT6mnQ" fontName="Segoe UI" fontHeight="8"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_DNLZf8ZVEfC0Xo-FjT6mnQ" points="[0, 0, -40, -242]$[40, 242, 0, 0]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_DNMAhsZVEfC0Xo-FjT6mnQ" id="(0.5,0.5)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_DNMAh8ZVEfC0Xo-FjT6mnQ" id="(0.5,0.5)"/>
+        </edges>
       </data>
     </ownedAnnotationEntries>
     <ownedAnnotationEntries xmi:type="description:AnnotationEntry" uid="_pZroEpvUEfC0pZ10YiDK8A" source="DANNOTATION_CUSTOMIZATION_KEY">
@@ -6891,7 +6986,7 @@
         </ownedStyle>
         <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.sysadl.viewpoints/description/SysADL_vp.odesign#//@ownedViewpoints[name='SysADL.Structural']/@ownedRepresentations[name='SysADL.BDD']/@defaultLayer/@containerMappings[name='BDD']/@subContainerMappings[name='BDD.ComponentDef']"/>
       </ownedDiagramElements>
-      <ownedDiagramElements xmi:type="diagram:DNodeList" uid="_ZCp50JvVEfC0pZ10YiDK8A" name="&lt;&lt;component>>&#xA;SmartParkingSystem" tooltipText="Component SmartParkingSystem">
+      <ownedDiagramElements xmi:type="diagram:DNodeList" uid="_ZCp50JvVEfC0pZ10YiDK8A" name="&lt;&lt;component>>&#xA;SmartParkingSystem" tooltipText="Component SmartParkingSystem" outgoingEdges="_sMxZMcZUEfC0Xo-FjT6mnQ _uSFf5MZUEfC0Xo-FjT6mnQ _wySLyMZUEfC0Xo-FjT6mnQ _x_09CcZUEfC0Xo-FjT6mnQ _DNBozMZVEfC0Xo-FjT6mnQ">
         <target xmi:type="sysadl:ComponentDef" href="SmartParking.sysadl#//@packages[name='SmartParkingComponents']/@definitions[name='SmartParkingSystem']"/>
         <semanticElements xmi:type="sysadl:ComponentDef" href="SmartParking.sysadl#//@packages[name='SmartParkingComponents']/@definitions[name='SmartParkingSystem']"/>
         <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_0chTUZvoEfC0pZ10YiDK8A" iconPath="/org.sysadl.viewpoints/icons/Component.gif" borderSize="1" borderSizeComputationExpression="1" backgroundStyle="GradientTopToBottom" foregroundColor="194,239,255">
@@ -6955,10 +7050,10 @@
         </ownedStyle>
         <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.sysadl.viewpoints/description/SysADL_vp.odesign#//@ownedViewpoints[name='SysADL.Structural']/@ownedRepresentations[name='SysADL.BDD']/@defaultLayer/@containerMappings[name='BDD']/@subContainerMappings[name='BDD.ComponentDef']"/>
       </ownedDiagramElements>
-      <ownedDiagramElements xmi:type="diagram:DNodeList" uid="_MjPVQMO1EfCFL7FM90m-0Q" name="&lt;&lt;component>>&#xA;CentralControllerCP">
+      <ownedDiagramElements xmi:type="diagram:DNodeList" uid="_MjPVQMO1EfCFL7FM90m-0Q" name="&lt;&lt;component>>&#xA;CentralControllerCP" incomingEdges="_DNBozMZVEfC0Xo-FjT6mnQ">
         <target xmi:type="sysadl:ComponentDef" href="SmartParking.sysadl#//@packages[name='SmartParkingComponents']/@definitions[name='CentralControllerCP']"/>
         <semanticElements xmi:type="sysadl:ComponentDef" href="SmartParking.sysadl#//@packages[name='SmartParkingComponents']/@definitions[name='CentralControllerCP']"/>
-        <ownedBorderedNodes xmi:type="diagram:DNode" uid="_jPsfHMO1EfCFL7FM90m-0Q" name="cec3 : UpdateAuthorizedOPT [1,1] " tooltipText="Port cec3" width="2" height="2" resizeKind="NSEW">
+        <ownedBorderedNodes xmi:type="diagram:DNode" uid="_jPsfHMO1EfCFL7FM90m-0Q" name="cec3 : UpdateAuthorizedOPT [1,2] " tooltipText="Port cec3" width="2" height="2" resizeKind="NSEW">
           <target xmi:type="sysadl:PortUse" href="SmartParking.sysadl#//@packages[name='SmartParkingComponents']/@definitions[name='CentralControllerCP']/@ports[name='cec3']"/>
           <semanticElements xmi:type="sysadl:PortUse" href="SmartParking.sysadl#//@packages[name='SmartParkingComponents']/@definitions[name='CentralControllerCP']/@ports[name='cec3']"/>
           <ownedStyle xmi:type="diagram:Square" uid="_jPttMMO1EfCFL7FM90m-0Q" showIcon="false" labelAlignment="LEFT" width="2" height="2" color="255,255,255">
@@ -6966,7 +7061,7 @@
           </ownedStyle>
           <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.sysadl.viewpoints/description/SysADL_vp.odesign#//@ownedViewpoints[name='SysADL.Structural']/@ownedRepresentations[name='SysADL.BDD']/@defaultLayer/@containerMappings[name='BDD']/@subContainerMappings[name='BDD.ComponentDef']/@borderedNodeMappings[name='BDD.ComDef.Ports']"/>
         </ownedBorderedNodes>
-        <ownedBorderedNodes xmi:type="diagram:DNode" uid="_spjKYMO1EfCFL7FM90m-0Q" name="cec4 : SectionVacancyOPT [1,1] " tooltipText="Port cec4" width="2" height="2" resizeKind="NSEW">
+        <ownedBorderedNodes xmi:type="diagram:DNode" uid="_spjKYMO1EfCFL7FM90m-0Q" name="cec4 : SectionVacancyOPT [1,2] " tooltipText="Port cec4" width="2" height="2" resizeKind="NSEW">
           <target xmi:type="sysadl:PortUse" href="SmartParking.sysadl#//@packages[name='SmartParkingComponents']/@definitions[name='CentralControllerCP']/@ports[name='cec4']"/>
           <semanticElements xmi:type="sysadl:PortUse" href="SmartParking.sysadl#//@packages[name='SmartParkingComponents']/@definitions[name='CentralControllerCP']/@ports[name='cec4']"/>
           <ownedStyle xmi:type="diagram:Square" uid="_spjKYcO1EfCFL7FM90m-0Q" showIcon="false" labelAlignment="LEFT" width="2" height="2" color="255,255,255">
@@ -6974,7 +7069,7 @@
           </ownedStyle>
           <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.sysadl.viewpoints/description/SysADL_vp.odesign#//@ownedViewpoints[name='SysADL.Structural']/@ownedRepresentations[name='SysADL.BDD']/@defaultLayer/@containerMappings[name='BDD']/@subContainerMappings[name='BDD.ComponentDef']/@borderedNodeMappings[name='BDD.ComDef.Ports']"/>
         </ownedBorderedNodes>
-        <ownedBorderedNodes xmi:type="diagram:DNode" uid="_HHRJ6sO3EfCFL7FM90m-0Q" name="cec1 : LogParkingBarrierIPT [1,1] " tooltipText="Port cec1" width="2" height="2" resizeKind="NSEW">
+        <ownedBorderedNodes xmi:type="diagram:DNode" uid="_HHRJ6sO3EfCFL7FM90m-0Q" name="cec1 : LogParkingBarrierIPT [1,2] " tooltipText="Port cec1" width="2" height="2" resizeKind="NSEW">
           <target xmi:type="sysadl:PortUse" href="SmartParking.sysadl#//@packages[name='SmartParkingComponents']/@definitions[name='CentralControllerCP']/@ports[name='cec1']"/>
           <semanticElements xmi:type="sysadl:PortUse" href="SmartParking.sysadl#//@packages[name='SmartParkingComponents']/@definitions[name='CentralControllerCP']/@ports[name='cec1']"/>
           <ownedStyle xmi:type="diagram:Square" uid="_HHRJ68O3EfCFL7FM90m-0Q" showIcon="false" labelAlignment="LEFT" width="2" height="2" color="255,255,255">
@@ -6982,10 +7077,18 @@
           </ownedStyle>
           <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.sysadl.viewpoints/description/SysADL_vp.odesign#//@ownedViewpoints[name='SysADL.Structural']/@ownedRepresentations[name='SysADL.BDD']/@defaultLayer/@containerMappings[name='BDD']/@subContainerMappings[name='BDD.ComponentDef']/@borderedNodeMappings[name='BDD.ComDef.Ports']"/>
         </ownedBorderedNodes>
-        <ownedBorderedNodes xmi:type="diagram:DNode" uid="_JY-SYMVaEfC6SLLL3Srv8Q" name="cec2 : TransactionStatusIPT [1,1] " tooltipText="Port cec2" width="2" height="2" resizeKind="NSEW">
+        <ownedBorderedNodes xmi:type="diagram:DNode" uid="_JY-SYMVaEfC6SLLL3Srv8Q" name="cec2 : TransactionStatusIPT [1,2] " tooltipText="Port cec2" width="2" height="2" resizeKind="NSEW">
           <target xmi:type="sysadl:PortUse" href="SmartParking.sysadl#//@packages[name='SmartParkingComponents']/@definitions[name='CentralControllerCP']/@ports[name='cec2']"/>
           <semanticElements xmi:type="sysadl:PortUse" href="SmartParking.sysadl#//@packages[name='SmartParkingComponents']/@definitions[name='CentralControllerCP']/@ports[name='cec2']"/>
           <ownedStyle xmi:type="diagram:Square" uid="_JY-SYcVaEfC6SLLL3Srv8Q" showIcon="false" labelAlignment="LEFT" width="2" height="2" color="255,255,255">
+            <description xmi:type="style:SquareDescription" href="platform:/plugin/org.sysadl.viewpoints/description/SysADL_vp.odesign#//@ownedViewpoints[name='SysADL.Structural']/@ownedRepresentations[name='SysADL.BDD']/@defaultLayer/@containerMappings[name='BDD']/@subContainerMappings[name='BDD.ComponentDef']/@borderedNodeMappings[name='BDD.ComDef.Ports']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.sysadl.viewpoints/description/SysADL_vp.odesign#//@ownedViewpoints[name='SysADL.Structural']/@ownedRepresentations[name='SysADL.BDD']/@defaultLayer/@containerMappings[name='BDD']/@subContainerMappings[name='BDD.ComponentDef']/@borderedNodeMappings[name='BDD.ComDef.Ports']"/>
+        </ownedBorderedNodes>
+        <ownedBorderedNodes xmi:type="diagram:DNode" uid="_-kaemcZUEfC0Xo-FjT6mnQ" name="cec5 : SectionVacancyIPT [1,2] " tooltipText="Port cec5" width="2" height="2" resizeKind="NSEW">
+          <target xmi:type="sysadl:PortUse" href="SmartParking.sysadl#//@packages[name='SmartParkingComponents']/@definitions[name='CentralControllerCP']/@ports[name='cec5']"/>
+          <semanticElements xmi:type="sysadl:PortUse" href="SmartParking.sysadl#//@packages[name='SmartParkingComponents']/@definitions[name='CentralControllerCP']/@ports[name='cec5']"/>
+          <ownedStyle xmi:type="diagram:Square" uid="_-kaemsZUEfC0Xo-FjT6mnQ" showIcon="false" labelAlignment="LEFT" width="2" height="2" color="255,255,255">
             <description xmi:type="style:SquareDescription" href="platform:/plugin/org.sysadl.viewpoints/description/SysADL_vp.odesign#//@ownedViewpoints[name='SysADL.Structural']/@ownedRepresentations[name='SysADL.BDD']/@defaultLayer/@containerMappings[name='BDD']/@subContainerMappings[name='BDD.ComponentDef']/@borderedNodeMappings[name='BDD.ComDef.Ports']/@style"/>
           </ownedStyle>
           <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.sysadl.viewpoints/description/SysADL_vp.odesign#//@ownedViewpoints[name='SysADL.Structural']/@ownedRepresentations[name='SysADL.BDD']/@defaultLayer/@containerMappings[name='BDD']/@subContainerMappings[name='BDD.ComponentDef']/@borderedNodeMappings[name='BDD.ComDef.Ports']"/>
@@ -7227,7 +7330,7 @@
         </ownedStyle>
         <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.sysadl.viewpoints/description/SysADL_vp.odesign#//@ownedViewpoints[name='SysADL.Structural']/@ownedRepresentations[name='SysADL.BDD']/@defaultLayer/@containerMappings[name='BDD']/@subContainerMappings[name='BDD.ComponentDef']"/>
       </ownedDiagramElements>
-      <ownedDiagramElements xmi:type="diagram:DNodeList" uid="_W4kw0MW3EfC7_s7YFC14Pg" name="&lt;&lt;component>>&#xA;ExitParkingBarrier" tooltipText="Component ExitParkingBarrier" outgoingEdges="_bQG_gsW8EfC7_s7YFC14Pg _0OIKCMXBEfC7_s7YFC14Pg _534n4MXBEfC7_s7YFC14Pg _9GsGMsXBEfC7_s7YFC14Pg _BC8gZsXCEfC7_s7YFC14Pg">
+      <ownedDiagramElements xmi:type="diagram:DNodeList" uid="_W4kw0MW3EfC7_s7YFC14Pg" name="&lt;&lt;component>>&#xA;ExitParkingBarrier" tooltipText="Component ExitParkingBarrier" outgoingEdges="_bQG_gsW8EfC7_s7YFC14Pg _0OIKCMXBEfC7_s7YFC14Pg _534n4MXBEfC7_s7YFC14Pg _9GsGMsXBEfC7_s7YFC14Pg _BC8gZsXCEfC7_s7YFC14Pg" incomingEdges="_sMxZMcZUEfC0Xo-FjT6mnQ">
         <target xmi:type="sysadl:ComponentDef" href="SmartParking.sysadl#//@packages[name='SmartParkingComponents']/@definitions[name='ExitParkingBarrier']"/>
         <semanticElements xmi:type="sysadl:ComponentDef" href="SmartParking.sysadl#//@packages[name='SmartParkingComponents']/@definitions[name='ExitParkingBarrier']"/>
         <ownedBorderedNodes xmi:type="diagram:DNode" uid="_eG-w-MW6EfC7_s7YFC14Pg" name="expbProxy2 : LogParkingBarrierOPT [1,1] " tooltipText="Port expbProxy2" width="2" height="2" resizeKind="NSEW">
@@ -7259,7 +7362,7 @@
           <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.sysadl.viewpoints/description/SysADL_vp.odesign#//@ownedViewpoints[name='SysADL.Structural']/@ownedRepresentations[name='SysADL.BDD']/@defaultLayer/@containerMappings[name='BDD']/@subContainerMappings[name='BDD.ComponentDef']/@subNodeMappings[name='BDD.CompDef.Configuration']"/>
         </ownedElements>
       </ownedDiagramElements>
-      <ownedDiagramElements xmi:type="diagram:DNodeList" uid="_9bt_IMW6EfC7_s7YFC14Pg" name="&lt;&lt;component>>&#xA;EntryParkingBarrier" tooltipText="Component EntryParkingBarrier" outgoingEdges="_CvhsGcXEEfC7_s7YFC14Pg _OQemzMXEEfC7_s7YFC14Pg _q2_7UsXEEfC7_s7YFC14Pg _yE_zEMXEEfC7_s7YFC14Pg _R7FnV8ZPEfC0Xo-FjT6mnQ _hoAPVMZTEfC0Xo-FjT6mnQ">
+      <ownedDiagramElements xmi:type="diagram:DNodeList" uid="_9bt_IMW6EfC7_s7YFC14Pg" name="&lt;&lt;component>>&#xA;EntryParkingBarrier" tooltipText="Component EntryParkingBarrier" outgoingEdges="_CvhsGcXEEfC7_s7YFC14Pg _OQemzMXEEfC7_s7YFC14Pg _q2_7UsXEEfC7_s7YFC14Pg _yE_zEMXEEfC7_s7YFC14Pg _R7FnV8ZPEfC0Xo-FjT6mnQ _hoAPVMZTEfC0Xo-FjT6mnQ" incomingEdges="_uSFf5MZUEfC0Xo-FjT6mnQ">
         <target xmi:type="sysadl:ComponentDef" href="SmartParking.sysadl#//@packages[name='SmartParkingComponents']/@definitions[name='EntryParkingBarrier']"/>
         <semanticElements xmi:type="sysadl:ComponentDef" href="SmartParking.sysadl#//@packages[name='SmartParkingComponents']/@definitions[name='EntryParkingBarrier']"/>
         <ownedBorderedNodes xmi:type="diagram:DNode" uid="_FduGwcW7EfC7_s7YFC14Pg" name="epbProxy1 : UpdateAuthorizedIPT [1,1] " tooltipText="Port epbProxy1" width="2" height="2" resizeKind="NSEW">
@@ -7291,7 +7394,7 @@
           <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.sysadl.viewpoints/description/SysADL_vp.odesign#//@ownedViewpoints[name='SysADL.Structural']/@ownedRepresentations[name='SysADL.BDD']/@defaultLayer/@containerMappings[name='BDD']/@subContainerMappings[name='BDD.ComponentDef']/@subNodeMappings[name='BDD.CompDef.Configuration']"/>
         </ownedElements>
       </ownedDiagramElements>
-      <ownedDiagramElements xmi:type="diagram:DNodeList" uid="__ywAIMY3EfCn8IVfTXUxdQ" name="&lt;&lt;component>>&#xA;Totem" tooltipText="Component Totem" outgoingEdges="_YvnGXMY4EfCn8IVfTXUxdQ _lGEFzMY4EfCn8IVfTXUxdQ _lw06EMY4EfCn8IVfTXUxdQ _q8u-RMY4EfCn8IVfTXUxdQ _v-K32MY4EfCn8IVfTXUxdQ">
+      <ownedDiagramElements xmi:type="diagram:DNodeList" uid="__ywAIMY3EfCn8IVfTXUxdQ" name="&lt;&lt;component>>&#xA;Totem" tooltipText="Component Totem" outgoingEdges="_YvnGXMY4EfCn8IVfTXUxdQ _lGEFzMY4EfCn8IVfTXUxdQ _lw06EMY4EfCn8IVfTXUxdQ _q8u-RMY4EfCn8IVfTXUxdQ _v-K32MY4EfCn8IVfTXUxdQ" incomingEdges="_wySLyMZUEfC0Xo-FjT6mnQ">
         <target xmi:type="sysadl:ComponentDef" href="SmartParking.sysadl#//@packages[name='SmartParkingComponents']/@definitions[name='Totem']"/>
         <semanticElements xmi:type="sysadl:ComponentDef" href="SmartParking.sysadl#//@packages[name='SmartParkingComponents']/@definitions[name='Totem']"/>
         <ownedBorderedNodes xmi:type="diagram:DNode" uid="_PchKVcY4EfCn8IVfTXUxdQ" name="to1Proxy : TransactionStatusOPT [1,1] " tooltipText="Port to1Proxy" width="2" height="2" resizeKind="NSEW">
@@ -7315,7 +7418,7 @@
           <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.sysadl.viewpoints/description/SysADL_vp.odesign#//@ownedViewpoints[name='SysADL.Structural']/@ownedRepresentations[name='SysADL.BDD']/@defaultLayer/@containerMappings[name='BDD']/@subContainerMappings[name='BDD.ComponentDef']/@subNodeMappings[name='BDD.CompDef.Configuration']"/>
         </ownedElements>
       </ownedDiagramElements>
-      <ownedDiagramElements xmi:type="diagram:DNodeList" uid="_tU8CMMZREfC0Xo-FjT6mnQ" name="&lt;&lt;component>>&#xA;Section" tooltipText="Component Section" outgoingEdges="_03R9EMZSEfC0Xo-FjT6mnQ _9SFmNMZSEfC0Xo-FjT6mnQ _GHYWeMZUEfC0Xo-FjT6mnQ">
+      <ownedDiagramElements xmi:type="diagram:DNodeList" uid="_tU8CMMZREfC0Xo-FjT6mnQ" name="&lt;&lt;component>>&#xA;Section" tooltipText="Component Section" outgoingEdges="_03R9EMZSEfC0Xo-FjT6mnQ _9SFmNMZSEfC0Xo-FjT6mnQ _GHYWeMZUEfC0Xo-FjT6mnQ" incomingEdges="_x_09CcZUEfC0Xo-FjT6mnQ">
         <target xmi:type="sysadl:ComponentDef" href="SmartParking.sysadl#//@packages[name='SmartParkingComponents']/@definitions[name='Section']"/>
         <semanticElements xmi:type="sysadl:ComponentDef" href="SmartParking.sysadl#//@packages[name='SmartParkingComponents']/@definitions[name='Section']"/>
         <ownedBorderedNodes xmi:type="diagram:DNode" uid="_FkpuiMZSEfC0Xo-FjT6mnQ" name="SecProxy1 : SectionVacancyIPT [1,1] " tooltipText="Port SecProxy1" width="2" height="2" resizeKind="NSEW">
@@ -7497,6 +7600,46 @@
       <ownedStyle xmi:type="diagram:EdgeStyle" uid="_GHYWecZUEfC0Xo-FjT6mnQ" sourceArrow="FillDiamond" targetArrow="NoDecoration" size="2">
         <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/org.sysadl.viewpoints/description/SysADL_vp.odesign#//@ownedViewpoints[name='SysADL.Structural']/@ownedRepresentations[name='SysADL.BDD']/@defaultLayer/@edgeMappings[name='BDD.Component.Composition']/@style"/>
         <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_GHYWesZUEfC0Xo-FjT6mnQ"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.sysadl.viewpoints/description/SysADL_vp.odesign#//@ownedViewpoints[name='SysADL.Structural']/@ownedRepresentations[name='SysADL.BDD']/@defaultLayer/@edgeMappings[name='BDD.Component.Composition']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_sMxZMcZUEfC0Xo-FjT6mnQ" sourceNode="_ZCp50JvVEfC0pZ10YiDK8A" targetNode="_W4kw0MW3EfC7_s7YFC14Pg">
+      <target xmi:type="sysadl:ComponentDef" href="SmartParking.sysadl#//@packages[name='SmartParkingComponents']/@definitions[name='SmartParkingSystem']"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_sMxZMsZUEfC0Xo-FjT6mnQ" sourceArrow="FillDiamond" targetArrow="NoDecoration" size="2">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/org.sysadl.viewpoints/description/SysADL_vp.odesign#//@ownedViewpoints[name='SysADL.Structural']/@ownedRepresentations[name='SysADL.BDD']/@defaultLayer/@edgeMappings[name='BDD.Component.Composition']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_sMxZM8ZUEfC0Xo-FjT6mnQ"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.sysadl.viewpoints/description/SysADL_vp.odesign#//@ownedViewpoints[name='SysADL.Structural']/@ownedRepresentations[name='SysADL.BDD']/@defaultLayer/@edgeMappings[name='BDD.Component.Composition']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_uSFf5MZUEfC0Xo-FjT6mnQ" sourceNode="_ZCp50JvVEfC0pZ10YiDK8A" targetNode="_9bt_IMW6EfC7_s7YFC14Pg">
+      <target xmi:type="sysadl:ComponentDef" href="SmartParking.sysadl#//@packages[name='SmartParkingComponents']/@definitions[name='SmartParkingSystem']"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_uSFf5cZUEfC0Xo-FjT6mnQ" sourceArrow="FillDiamond" targetArrow="NoDecoration" size="2">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/org.sysadl.viewpoints/description/SysADL_vp.odesign#//@ownedViewpoints[name='SysADL.Structural']/@ownedRepresentations[name='SysADL.BDD']/@defaultLayer/@edgeMappings[name='BDD.Component.Composition']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_uSFf5sZUEfC0Xo-FjT6mnQ"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.sysadl.viewpoints/description/SysADL_vp.odesign#//@ownedViewpoints[name='SysADL.Structural']/@ownedRepresentations[name='SysADL.BDD']/@defaultLayer/@edgeMappings[name='BDD.Component.Composition']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_wySLyMZUEfC0Xo-FjT6mnQ" sourceNode="_ZCp50JvVEfC0pZ10YiDK8A" targetNode="__ywAIMY3EfCn8IVfTXUxdQ">
+      <target xmi:type="sysadl:ComponentDef" href="SmartParking.sysadl#//@packages[name='SmartParkingComponents']/@definitions[name='SmartParkingSystem']"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_wySLycZUEfC0Xo-FjT6mnQ" sourceArrow="FillDiamond" targetArrow="NoDecoration" size="2">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/org.sysadl.viewpoints/description/SysADL_vp.odesign#//@ownedViewpoints[name='SysADL.Structural']/@ownedRepresentations[name='SysADL.BDD']/@defaultLayer/@edgeMappings[name='BDD.Component.Composition']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_wySLysZUEfC0Xo-FjT6mnQ"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.sysadl.viewpoints/description/SysADL_vp.odesign#//@ownedViewpoints[name='SysADL.Structural']/@ownedRepresentations[name='SysADL.BDD']/@defaultLayer/@edgeMappings[name='BDD.Component.Composition']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_x_09CcZUEfC0Xo-FjT6mnQ" sourceNode="_ZCp50JvVEfC0pZ10YiDK8A" targetNode="_tU8CMMZREfC0Xo-FjT6mnQ">
+      <target xmi:type="sysadl:ComponentDef" href="SmartParking.sysadl#//@packages[name='SmartParkingComponents']/@definitions[name='SmartParkingSystem']"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_x_1jsMZUEfC0Xo-FjT6mnQ" sourceArrow="FillDiamond" targetArrow="NoDecoration" size="2">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/org.sysadl.viewpoints/description/SysADL_vp.odesign#//@ownedViewpoints[name='SysADL.Structural']/@ownedRepresentations[name='SysADL.BDD']/@defaultLayer/@edgeMappings[name='BDD.Component.Composition']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_x_1jscZUEfC0Xo-FjT6mnQ"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.sysadl.viewpoints/description/SysADL_vp.odesign#//@ownedViewpoints[name='SysADL.Structural']/@ownedRepresentations[name='SysADL.BDD']/@defaultLayer/@edgeMappings[name='BDD.Component.Composition']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_DNBozMZVEfC0Xo-FjT6mnQ" sourceNode="_ZCp50JvVEfC0pZ10YiDK8A" targetNode="_MjPVQMO1EfCFL7FM90m-0Q">
+      <target xmi:type="sysadl:ComponentDef" href="SmartParking.sysadl#//@packages[name='SmartParkingComponents']/@definitions[name='SmartParkingSystem']"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_DNBozcZVEfC0Xo-FjT6mnQ" sourceArrow="FillDiamond" targetArrow="NoDecoration" size="2">
+        <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/org.sysadl.viewpoints/description/SysADL_vp.odesign#//@ownedViewpoints[name='SysADL.Structural']/@ownedRepresentations[name='SysADL.BDD']/@defaultLayer/@edgeMappings[name='BDD.Component.Composition']/@style"/>
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_DNBozsZVEfC0Xo-FjT6mnQ"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.sysadl.viewpoints/description/SysADL_vp.odesign#//@ownedViewpoints[name='SysADL.Structural']/@ownedRepresentations[name='SysADL.BDD']/@defaultLayer/@edgeMappings[name='BDD.Component.Composition']"/>
     </ownedDiagramElements>
@@ -9251,5 +9394,454 @@
     <filterVariableHistory xmi:type="diagram:FilterVariableHistory" uid="_ytqk8MZSEfC0Xo-FjT6mnQ"/>
     <activatedLayers xmi:type="description_1:Layer" href="platform:/plugin/org.sysadl.viewpoints/description/SysADL_vp.odesign#//@ownedViewpoints[name='SysADL.Structural']/@ownedRepresentations[name='SysADL.IBD']/@defaultLayer"/>
     <target xmi:type="sysadl:Configuration" href="SmartParking.sysadl#//@packages[name='SmartParkingComponents']/@definitions[name='Section']/@composite"/>
+  </diagram:DSemanticDiagram>
+  <diagram:DSemanticDiagram uid="_n45I4MZUEfC0Xo-FjT6mnQ">
+    <ownedAnnotationEntries xmi:type="description:AnnotationEntry" uid="_n49aUMZUEfC0Xo-FjT6mnQ" source="GMF_DIAGRAMS">
+      <data xmi:type="notation:Diagram" xmi:id="_n49aUcZUEfC0Xo-FjT6mnQ" type="Sirius" element="_n45I4MZUEfC0Xo-FjT6mnQ" measurementUnit="Pixel">
+        <children xmi:type="notation:Node" xmi:id="_n4-ocMZUEfC0Xo-FjT6mnQ" type="2002" element="_n4-BYMZUEfC0Xo-FjT6mnQ">
+          <children xmi:type="notation:Node" xmi:id="_n4-oc8ZUEfC0Xo-FjT6mnQ" type="5006"/>
+          <children xmi:type="notation:Node" xmi:id="_n4-odMZUEfC0Xo-FjT6mnQ" type="7001">
+            <children xmi:type="notation:Node" xmi:id="_sM5UuMZUEfC0Xo-FjT6mnQ" type="3007" element="_sM0cNMZUEfC0Xo-FjT6mnQ">
+              <children xmi:type="notation:Node" xmi:id="_sM5Uu8ZUEfC0Xo-FjT6mnQ" type="5003">
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_sM5UvMZUEfC0Xo-FjT6mnQ" y="5"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_sM5UvcZUEfC0Xo-FjT6mnQ" type="3001" element="_sM0cN8ZUEfC0Xo-FjT6mnQ">
+                <children xmi:type="notation:Node" xmi:id="_sM5UwMZUEfC0Xo-FjT6mnQ" type="5001">
+                  <layoutConstraint xmi:type="notation:Location" xmi:id="_sM5UwcZUEfC0Xo-FjT6mnQ" x="21" y="3"/>
+                </children>
+                <children xmi:type="notation:Node" xmi:id="_sM57yMZUEfC0Xo-FjT6mnQ" type="3003" element="_sM0cOMZUEfC0Xo-FjT6mnQ">
+                  <styles xmi:type="notation:ShapeStyle" xmi:id="_sM57ycZUEfC0Xo-FjT6mnQ" fontName="Segoe UI"/>
+                  <layoutConstraint xmi:type="notation:Bounds" xmi:id="_sM57ysZUEfC0Xo-FjT6mnQ"/>
+                </children>
+                <styles xmi:type="notation:ShapeStyle" xmi:id="_sM5UvsZUEfC0Xo-FjT6mnQ" fontName="Segoe UI" fontHeight="8"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_sM5Uv8ZUEfC0Xo-FjT6mnQ" x="-12" y="10" width="20" height="20"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_sM57wMZUEfC0Xo-FjT6mnQ" type="3001" element="_sM0cOsZUEfC0Xo-FjT6mnQ">
+                <children xmi:type="notation:Node" xmi:id="_sM57w8ZUEfC0Xo-FjT6mnQ" type="5001">
+                  <layoutConstraint xmi:type="notation:Location" xmi:id="_sM57xMZUEfC0Xo-FjT6mnQ" x="21" y="3"/>
+                </children>
+                <children xmi:type="notation:Node" xmi:id="_sM57y8ZUEfC0Xo-FjT6mnQ" type="3003" element="_sM0cO8ZUEfC0Xo-FjT6mnQ">
+                  <styles xmi:type="notation:ShapeStyle" xmi:id="_sM57zMZUEfC0Xo-FjT6mnQ" fontName="Segoe UI"/>
+                  <layoutConstraint xmi:type="notation:Bounds" xmi:id="_sM57zcZUEfC0Xo-FjT6mnQ"/>
+                </children>
+                <styles xmi:type="notation:ShapeStyle" xmi:id="_sM57wcZUEfC0Xo-FjT6mnQ" fontName="Segoe UI" fontHeight="8"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_sM57wsZUEfC0Xo-FjT6mnQ" x="-12" y="85" width="20" height="20"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_sM57xcZUEfC0Xo-FjT6mnQ" type="3003" element="_sM0cNcZUEfC0Xo-FjT6mnQ">
+                <styles xmi:type="notation:ShapeStyle" xmi:id="_sM57xsZUEfC0Xo-FjT6mnQ" fontName="Segoe UI"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_sM57x8ZUEfC0Xo-FjT6mnQ"/>
+              </children>
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_sM5UucZUEfC0Xo-FjT6mnQ" fontName="Segoe UI" fontHeight="8"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_sM5UusZUEfC0Xo-FjT6mnQ" x="905" y="39" width="206" height="121"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_uSNbaMZUEfC0Xo-FjT6mnQ" type="3007" element="_uSIi5sZUEfC0Xo-FjT6mnQ">
+              <children xmi:type="notation:Node" xmi:id="_uSNba8ZUEfC0Xo-FjT6mnQ" type="5003">
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_uSNbbMZUEfC0Xo-FjT6mnQ" y="5"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_uSNbbcZUEfC0Xo-FjT6mnQ" type="3001" element="_uSIi6cZUEfC0Xo-FjT6mnQ">
+                <children xmi:type="notation:Node" xmi:id="_uSNbcMZUEfC0Xo-FjT6mnQ" type="5001">
+                  <layoutConstraint xmi:type="notation:Location" xmi:id="_uSNbccZUEfC0Xo-FjT6mnQ" x="21" y="3"/>
+                </children>
+                <children xmi:type="notation:Node" xmi:id="_uSOCeMZUEfC0Xo-FjT6mnQ" type="3003" element="_uSIi6sZUEfC0Xo-FjT6mnQ">
+                  <styles xmi:type="notation:ShapeStyle" xmi:id="_uSOCecZUEfC0Xo-FjT6mnQ" fontName="Segoe UI"/>
+                  <layoutConstraint xmi:type="notation:Bounds" xmi:id="_uSOCesZUEfC0Xo-FjT6mnQ"/>
+                </children>
+                <styles xmi:type="notation:ShapeStyle" xmi:id="_uSNbbsZUEfC0Xo-FjT6mnQ" fontName="Segoe UI" fontHeight="8"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_uSNbb8ZUEfC0Xo-FjT6mnQ" x="-12" y="5" width="20" height="20"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_uSOCcMZUEfC0Xo-FjT6mnQ" type="3001" element="_uSIi7MZUEfC0Xo-FjT6mnQ">
+                <children xmi:type="notation:Node" xmi:id="_uSOCc8ZUEfC0Xo-FjT6mnQ" type="5001">
+                  <layoutConstraint xmi:type="notation:Location" xmi:id="_uSOCdMZUEfC0Xo-FjT6mnQ" x="21" y="3"/>
+                </children>
+                <children xmi:type="notation:Node" xmi:id="_uSOCe8ZUEfC0Xo-FjT6mnQ" type="3003" element="_uSIi7cZUEfC0Xo-FjT6mnQ">
+                  <styles xmi:type="notation:ShapeStyle" xmi:id="_uSOCfMZUEfC0Xo-FjT6mnQ" fontName="Segoe UI"/>
+                  <layoutConstraint xmi:type="notation:Bounds" xmi:id="_uSOCfcZUEfC0Xo-FjT6mnQ"/>
+                </children>
+                <styles xmi:type="notation:ShapeStyle" xmi:id="_uSOCccZUEfC0Xo-FjT6mnQ" fontName="Segoe UI" fontHeight="8"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_uSOCcsZUEfC0Xo-FjT6mnQ" x="-12" y="80" width="20" height="20"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_uSOCdcZUEfC0Xo-FjT6mnQ" type="3003" element="_uSIi58ZUEfC0Xo-FjT6mnQ">
+                <styles xmi:type="notation:ShapeStyle" xmi:id="_uSOCdsZUEfC0Xo-FjT6mnQ" fontName="Segoe UI"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_uSOCd8ZUEfC0Xo-FjT6mnQ"/>
+              </children>
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_uSNbacZUEfC0Xo-FjT6mnQ" fontName="Segoe UI" fontHeight="8"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_uSNbasZUEfC0Xo-FjT6mnQ" x="915" y="189" width="206" height="116"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_wyaHTMZUEfC0Xo-FjT6mnQ" type="3007" element="_wyV11sZUEfC0Xo-FjT6mnQ">
+              <children xmi:type="notation:Node" xmi:id="_wyauUMZUEfC0Xo-FjT6mnQ" type="5003">
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_wyauUcZUEfC0Xo-FjT6mnQ" y="5"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_wyauUsZUEfC0Xo-FjT6mnQ" type="3001" element="_wyV12cZUEfC0Xo-FjT6mnQ">
+                <children xmi:type="notation:Node" xmi:id="_wyauVcZUEfC0Xo-FjT6mnQ" type="5001">
+                  <layoutConstraint xmi:type="notation:Location" xmi:id="_wyauVsZUEfC0Xo-FjT6mnQ" x="-71" y="21"/>
+                </children>
+                <children xmi:type="notation:Node" xmi:id="_wyauWsZUEfC0Xo-FjT6mnQ" type="3003" element="_wyV12sZUEfC0Xo-FjT6mnQ">
+                  <styles xmi:type="notation:ShapeStyle" xmi:id="_wyauW8ZUEfC0Xo-FjT6mnQ" fontName="Segoe UI"/>
+                  <layoutConstraint xmi:type="notation:Bounds" xmi:id="_wyauXMZUEfC0Xo-FjT6mnQ"/>
+                </children>
+                <styles xmi:type="notation:ShapeStyle" xmi:id="_wyauU8ZUEfC0Xo-FjT6mnQ" fontName="Segoe UI" fontHeight="8"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_wyauVMZUEfC0Xo-FjT6mnQ" x="95" y="-12" width="20" height="20"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_wyauV8ZUEfC0Xo-FjT6mnQ" type="3003" element="_wyV118ZUEfC0Xo-FjT6mnQ">
+                <styles xmi:type="notation:ShapeStyle" xmi:id="_wyauWMZUEfC0Xo-FjT6mnQ" fontName="Segoe UI"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_wyauWcZUEfC0Xo-FjT6mnQ"/>
+              </children>
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_wyaHTcZUEfC0Xo-FjT6mnQ" fontName="Segoe UI" fontHeight="8"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_wyaHTsZUEfC0Xo-FjT6mnQ" x="385" y="544" width="196" height="101"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_x_9fiMZUEfC0Xo-FjT6mnQ" type="3007" element="_x_4AAsZUEfC0Xo-FjT6mnQ">
+              <children xmi:type="notation:Node" xmi:id="_x_9fi8ZUEfC0Xo-FjT6mnQ" type="5003">
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_x_9fjMZUEfC0Xo-FjT6mnQ" y="5"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_x_9fjcZUEfC0Xo-FjT6mnQ" type="3001" element="_x_4ABcZUEfC0Xo-FjT6mnQ">
+                <children xmi:type="notation:Node" xmi:id="_x_9fkMZUEfC0Xo-FjT6mnQ" type="5001">
+                  <layoutConstraint xmi:type="notation:Location" xmi:id="_x_9fkcZUEfC0Xo-FjT6mnQ" x="-152" y="3"/>
+                </children>
+                <children xmi:type="notation:Node" xmi:id="_x_-GlcZUEfC0Xo-FjT6mnQ" type="3003" element="_x_4nAMZUEfC0Xo-FjT6mnQ">
+                  <styles xmi:type="notation:ShapeStyle" xmi:id="_x_-GlsZUEfC0Xo-FjT6mnQ" fontName="Segoe UI"/>
+                  <layoutConstraint xmi:type="notation:Bounds" xmi:id="_x_-Gl8ZUEfC0Xo-FjT6mnQ"/>
+                </children>
+                <styles xmi:type="notation:ShapeStyle" xmi:id="_x_9fjsZUEfC0Xo-FjT6mnQ" fontName="Segoe UI" fontHeight="8"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_x_9fj8ZUEfC0Xo-FjT6mnQ" x="178" y="10" width="20" height="20"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_x_9fksZUEfC0Xo-FjT6mnQ" type="3001" element="_x_4nAsZUEfC0Xo-FjT6mnQ">
+                <children xmi:type="notation:Node" xmi:id="_x_-GkMZUEfC0Xo-FjT6mnQ" type="5001">
+                  <layoutConstraint xmi:type="notation:Location" xmi:id="_x_-GkcZUEfC0Xo-FjT6mnQ" x="-158" y="3"/>
+                </children>
+                <children xmi:type="notation:Node" xmi:id="_x_-GmMZUEfC0Xo-FjT6mnQ" type="3003" element="_x_4nA8ZUEfC0Xo-FjT6mnQ">
+                  <styles xmi:type="notation:ShapeStyle" xmi:id="_x_-GmcZUEfC0Xo-FjT6mnQ" fontName="Segoe UI"/>
+                  <layoutConstraint xmi:type="notation:Bounds" xmi:id="_x_-GmsZUEfC0Xo-FjT6mnQ"/>
+                </children>
+                <styles xmi:type="notation:ShapeStyle" xmi:id="_x_9fk8ZUEfC0Xo-FjT6mnQ" fontName="Segoe UI" fontHeight="8"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_x_9flMZUEfC0Xo-FjT6mnQ" x="178" y="65" width="20" height="20"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_x_-GksZUEfC0Xo-FjT6mnQ" type="3003" element="_x_4AA8ZUEfC0Xo-FjT6mnQ">
+                <styles xmi:type="notation:ShapeStyle" xmi:id="_x_-Gk8ZUEfC0Xo-FjT6mnQ" fontName="Segoe UI"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_x_-GlMZUEfC0Xo-FjT6mnQ"/>
+              </children>
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_x_9ficZUEfC0Xo-FjT6mnQ" fontName="Segoe UI" fontHeight="8"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_x_9fisZUEfC0Xo-FjT6mnQ" x="60" y="59" width="186" height="101"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_DNJkQMZVEfC0Xo-FjT6mnQ" type="3007" element="_DNErysZVEfC0Xo-FjT6mnQ">
+              <children xmi:type="notation:Node" xmi:id="_DNJkQ8ZVEfC0Xo-FjT6mnQ" type="5003">
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_DNJkRMZVEfC0Xo-FjT6mnQ" y="5"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_DNKLUMZVEfC0Xo-FjT6mnQ" type="3001" element="_DNErzcZVEfC0Xo-FjT6mnQ">
+                <children xmi:type="notation:Node" xmi:id="_DNKLU8ZVEfC0Xo-FjT6mnQ" type="5001">
+                  <layoutConstraint xmi:type="notation:Location" xmi:id="_DNKLVMZVEfC0Xo-FjT6mnQ" x="-147" y="3"/>
+                </children>
+                <children xmi:type="notation:Node" xmi:id="_DNKybcZVEfC0Xo-FjT6mnQ" type="3003" element="_DNErzsZVEfC0Xo-FjT6mnQ">
+                  <styles xmi:type="notation:ShapeStyle" xmi:id="_DNKybsZVEfC0Xo-FjT6mnQ" fontName="Segoe UI"/>
+                  <layoutConstraint xmi:type="notation:Bounds" xmi:id="_DNKyb8ZVEfC0Xo-FjT6mnQ"/>
+                </children>
+                <styles xmi:type="notation:ShapeStyle" xmi:id="_DNKLUcZVEfC0Xo-FjT6mnQ" fontName="Segoe UI" fontHeight="8"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_DNKLUsZVEfC0Xo-FjT6mnQ" x="348" y="130" width="20" height="20"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_DNKLVcZVEfC0Xo-FjT6mnQ" type="3001" element="_DNEr0MZVEfC0Xo-FjT6mnQ">
+                <children xmi:type="notation:Node" xmi:id="_DNKLWMZVEfC0Xo-FjT6mnQ" type="5001">
+                  <layoutConstraint xmi:type="notation:Location" xmi:id="_DNKLWcZVEfC0Xo-FjT6mnQ" x="21" y="3"/>
+                </children>
+                <children xmi:type="notation:Node" xmi:id="_DNLZcMZVEfC0Xo-FjT6mnQ" type="3003" element="_DNEr0cZVEfC0Xo-FjT6mnQ">
+                  <styles xmi:type="notation:ShapeStyle" xmi:id="_DNLZccZVEfC0Xo-FjT6mnQ" fontName="Segoe UI"/>
+                  <layoutConstraint xmi:type="notation:Bounds" xmi:id="_DNLZcsZVEfC0Xo-FjT6mnQ"/>
+                </children>
+                <styles xmi:type="notation:ShapeStyle" xmi:id="_DNKLVsZVEfC0Xo-FjT6mnQ" fontName="Segoe UI" fontHeight="8"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_DNKLV8ZVEfC0Xo-FjT6mnQ" x="-12" y="15" width="20" height="20"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_DNKLWsZVEfC0Xo-FjT6mnQ" type="3001" element="_DNFS0MZVEfC0Xo-FjT6mnQ">
+                <children xmi:type="notation:Node" xmi:id="_DNKLXcZVEfC0Xo-FjT6mnQ" type="5001">
+                  <layoutConstraint xmi:type="notation:Location" xmi:id="_DNKLXsZVEfC0Xo-FjT6mnQ" x="-138" y="3"/>
+                </children>
+                <children xmi:type="notation:Node" xmi:id="_DNLZc8ZVEfC0Xo-FjT6mnQ" type="3003" element="_DNFS0cZVEfC0Xo-FjT6mnQ">
+                  <styles xmi:type="notation:ShapeStyle" xmi:id="_DNLZdMZVEfC0Xo-FjT6mnQ" fontName="Segoe UI"/>
+                  <layoutConstraint xmi:type="notation:Bounds" xmi:id="_DNLZdcZVEfC0Xo-FjT6mnQ"/>
+                </children>
+                <styles xmi:type="notation:ShapeStyle" xmi:id="_DNKLW8ZVEfC0Xo-FjT6mnQ" fontName="Segoe UI" fontHeight="8"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_DNKLXMZVEfC0Xo-FjT6mnQ" x="348" y="40" width="20" height="20"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_DNKyYMZVEfC0Xo-FjT6mnQ" type="3001" element="_DNFS08ZVEfC0Xo-FjT6mnQ">
+                <children xmi:type="notation:Node" xmi:id="_DNKyY8ZVEfC0Xo-FjT6mnQ" type="5001">
+                  <layoutConstraint xmi:type="notation:Location" xmi:id="_DNKyZMZVEfC0Xo-FjT6mnQ" x="-57" y="-14"/>
+                </children>
+                <children xmi:type="notation:Node" xmi:id="_DNLZdsZVEfC0Xo-FjT6mnQ" type="3003" element="_DNFS1MZVEfC0Xo-FjT6mnQ">
+                  <styles xmi:type="notation:ShapeStyle" xmi:id="_DNLZd8ZVEfC0Xo-FjT6mnQ" fontName="Segoe UI"/>
+                  <layoutConstraint xmi:type="notation:Bounds" xmi:id="_DNLZeMZVEfC0Xo-FjT6mnQ"/>
+                </children>
+                <styles xmi:type="notation:ShapeStyle" xmi:id="_DNKyYcZVEfC0Xo-FjT6mnQ" fontName="Segoe UI" fontHeight="8"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_DNKyYsZVEfC0Xo-FjT6mnQ" x="175" y="373" width="20" height="20"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_DNKyZcZVEfC0Xo-FjT6mnQ" type="3001" element="_DNFS1sZVEfC0Xo-FjT6mnQ">
+                <children xmi:type="notation:Node" xmi:id="_DNKyaMZVEfC0Xo-FjT6mnQ" type="5001">
+                  <layoutConstraint xmi:type="notation:Location" xmi:id="_DNKyacZVEfC0Xo-FjT6mnQ" x="21" y="3"/>
+                </children>
+                <children xmi:type="notation:Node" xmi:id="_DNLZecZVEfC0Xo-FjT6mnQ" type="3003" element="_DNFS18ZVEfC0Xo-FjT6mnQ">
+                  <styles xmi:type="notation:ShapeStyle" xmi:id="_DNLZesZVEfC0Xo-FjT6mnQ" fontName="Segoe UI"/>
+                  <layoutConstraint xmi:type="notation:Bounds" xmi:id="_DNLZe8ZVEfC0Xo-FjT6mnQ"/>
+                </children>
+                <styles xmi:type="notation:ShapeStyle" xmi:id="_DNKyZsZVEfC0Xo-FjT6mnQ" fontName="Segoe UI" fontHeight="8"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_DNKyZ8ZVEfC0Xo-FjT6mnQ" x="-12" y="55" width="20" height="20"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_DNKyasZVEfC0Xo-FjT6mnQ" type="3003" element="_DNEry8ZVEfC0Xo-FjT6mnQ">
+                <styles xmi:type="notation:ShapeStyle" xmi:id="_DNKya8ZVEfC0Xo-FjT6mnQ" fontName="Segoe UI"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_DNKybMZVEfC0Xo-FjT6mnQ"/>
+              </children>
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_DNJkQcZVEfC0Xo-FjT6mnQ" fontName="Segoe UI" fontHeight="8"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_DNJkQsZVEfC0Xo-FjT6mnQ" x="425" y="69" width="356" height="381"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_HAWJEMZVEfC0Xo-FjT6mnQ" type="3007" element="_HARQrMZVEfC0Xo-FjT6mnQ">
+              <children xmi:type="notation:Node" xmi:id="_HAWJE8ZVEfC0Xo-FjT6mnQ" type="5003">
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_HAWJFMZVEfC0Xo-FjT6mnQ" y="5"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_HAWJFcZVEfC0Xo-FjT6mnQ" type="3001" element="_HAR3osZVEfC0Xo-FjT6mnQ">
+                <children xmi:type="notation:Node" xmi:id="_HAWJGMZVEfC0Xo-FjT6mnQ" type="5001">
+                  <layoutConstraint xmi:type="notation:Location" xmi:id="_HAWJGcZVEfC0Xo-FjT6mnQ" x="-152" y="3"/>
+                </children>
+                <children xmi:type="notation:Node" xmi:id="_HAWwKMZVEfC0Xo-FjT6mnQ" type="3003" element="_HAR3o8ZVEfC0Xo-FjT6mnQ">
+                  <styles xmi:type="notation:ShapeStyle" xmi:id="_HAWwKcZVEfC0Xo-FjT6mnQ" fontName="Segoe UI"/>
+                  <layoutConstraint xmi:type="notation:Bounds" xmi:id="_HAWwKsZVEfC0Xo-FjT6mnQ"/>
+                </children>
+                <styles xmi:type="notation:ShapeStyle" xmi:id="_HAWJFsZVEfC0Xo-FjT6mnQ" fontName="Segoe UI" fontHeight="8"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_HAWJF8ZVEfC0Xo-FjT6mnQ" x="178" y="10" width="20" height="20"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_HAWwIMZVEfC0Xo-FjT6mnQ" type="3001" element="_HAR3pcZVEfC0Xo-FjT6mnQ">
+                <children xmi:type="notation:Node" xmi:id="_HAWwI8ZVEfC0Xo-FjT6mnQ" type="5001">
+                  <layoutConstraint xmi:type="notation:Location" xmi:id="_HAWwJMZVEfC0Xo-FjT6mnQ" x="-158" y="7"/>
+                </children>
+                <children xmi:type="notation:Node" xmi:id="_HAWwK8ZVEfC0Xo-FjT6mnQ" type="3003" element="_HAR3psZVEfC0Xo-FjT6mnQ">
+                  <styles xmi:type="notation:ShapeStyle" xmi:id="_HAWwLMZVEfC0Xo-FjT6mnQ" fontName="Segoe UI"/>
+                  <layoutConstraint xmi:type="notation:Bounds" xmi:id="_HAWwLcZVEfC0Xo-FjT6mnQ"/>
+                </children>
+                <styles xmi:type="notation:ShapeStyle" xmi:id="_HAWwIcZVEfC0Xo-FjT6mnQ" fontName="Segoe UI" fontHeight="8"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_HAWwIsZVEfC0Xo-FjT6mnQ" x="178" y="75" width="20" height="20"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_HAWwJcZVEfC0Xo-FjT6mnQ" type="3003" element="_HAR3oMZVEfC0Xo-FjT6mnQ">
+                <styles xmi:type="notation:ShapeStyle" xmi:id="_HAWwJsZVEfC0Xo-FjT6mnQ" fontName="Segoe UI"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_HAWwJ8ZVEfC0Xo-FjT6mnQ"/>
+              </children>
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_HAWJEcZVEfC0Xo-FjT6mnQ" fontName="Segoe UI" fontHeight="8"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_HAWJEsZVEfC0Xo-FjT6mnQ" x="60" y="179" width="186" height="106"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_VYONkMZVEfC0Xo-FjT6mnQ" type="3007" element="_VYJ8LsZVEfC0Xo-FjT6mnQ">
+              <children xmi:type="notation:Node" xmi:id="_VYONk8ZVEfC0Xo-FjT6mnQ" type="5003">
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_VYONlMZVEfC0Xo-FjT6mnQ" y="5"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_VYO0oMZVEfC0Xo-FjT6mnQ" type="3001" element="_VYJ8McZVEfC0Xo-FjT6mnQ">
+                <children xmi:type="notation:Node" xmi:id="_VYO0o8ZVEfC0Xo-FjT6mnQ" type="5001">
+                  <layoutConstraint xmi:type="notation:Location" xmi:id="_VYO0pMZVEfC0Xo-FjT6mnQ" x="-71" y="21"/>
+                </children>
+                <children xmi:type="notation:Node" xmi:id="_VYO0qMZVEfC0Xo-FjT6mnQ" type="3003" element="_VYKjMMZVEfC0Xo-FjT6mnQ">
+                  <styles xmi:type="notation:ShapeStyle" xmi:id="_VYO0qcZVEfC0Xo-FjT6mnQ" fontName="Segoe UI"/>
+                  <layoutConstraint xmi:type="notation:Bounds" xmi:id="_VYO0qsZVEfC0Xo-FjT6mnQ"/>
+                </children>
+                <styles xmi:type="notation:ShapeStyle" xmi:id="_VYO0ocZVEfC0Xo-FjT6mnQ" fontName="Segoe UI" fontHeight="8"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_VYO0osZVEfC0Xo-FjT6mnQ" x="75" y="-12" width="20" height="20"/>
+              </children>
+              <children xmi:type="notation:Node" xmi:id="_VYO0pcZVEfC0Xo-FjT6mnQ" type="3003" element="_VYJ8L8ZVEfC0Xo-FjT6mnQ">
+                <styles xmi:type="notation:ShapeStyle" xmi:id="_VYO0psZVEfC0Xo-FjT6mnQ" fontName="Segoe UI"/>
+                <layoutConstraint xmi:type="notation:Bounds" xmi:id="_VYO0p8ZVEfC0Xo-FjT6mnQ"/>
+              </children>
+              <styles xmi:type="notation:ShapeStyle" xmi:id="_VYONkcZVEfC0Xo-FjT6mnQ" fontName="Segoe UI" fontHeight="8"/>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_VYONksZVEfC0Xo-FjT6mnQ" x="630" y="544" width="181" height="101"/>
+            </children>
+            <styles xmi:type="notation:SortingStyle" xmi:id="_n4-odcZUEfC0Xo-FjT6mnQ"/>
+            <styles xmi:type="notation:FilteringStyle" xmi:id="_n4-odsZUEfC0Xo-FjT6mnQ"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_n4-occZUEfC0Xo-FjT6mnQ" fontName="Segoe UI" fontHeight="8"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_n4-ocsZUEfC0Xo-FjT6mnQ" x="25" y="-10" width="1323" height="683"/>
+        </children>
+        <styles xmi:type="notation:DiagramStyle" xmi:id="_n49aUsZUEfC0Xo-FjT6mnQ"/>
+      </data>
+    </ownedAnnotationEntries>
+    <ownedAnnotationEntries xmi:type="description:AnnotationEntry" uid="_n4-BY8ZUEfC0Xo-FjT6mnQ" source="DANNOTATION_CUSTOMIZATION_KEY">
+      <data xmi:type="diagram:ComputedStyleDescriptionRegistry" uid="_n4-BZMZUEfC0Xo-FjT6mnQ"/>
+    </ownedAnnotationEntries>
+    <ownedDiagramElements xmi:type="diagram:DNodeContainer" uid="_n4-BYMZUEfC0Xo-FjT6mnQ" name=" ibd [Component] SmartParkingSystem" width="60" height="40">
+      <target xmi:type="sysadl:Configuration" href="SmartParking.sysadl#//@packages[name='SmartParkingComponents']/@definitions[name='SmartParkingSystem']/@composite"/>
+      <semanticElements xmi:type="sysadl:Configuration" href="SmartParking.sysadl#//@packages[name='SmartParkingComponents']/@definitions[name='SmartParkingSystem']/@composite"/>
+      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_n4-BYcZUEfC0Xo-FjT6mnQ" showIcon="false" labelAlignment="LEFT" borderSize="1" borderSizeComputationExpression="1" foregroundColor="255,255,255">
+        <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.sysadl.viewpoints/description/SysADL_vp.odesign#//@ownedViewpoints[name='SysADL.Structural']/@ownedRepresentations[name='SysADL.IBD']/@defaultLayer/@containerMappings[name='IBD.Config']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.sysadl.viewpoints/description/SysADL_vp.odesign#//@ownedViewpoints[name='SysADL.Structural']/@ownedRepresentations[name='SysADL.IBD']/@defaultLayer/@containerMappings[name='IBD.Config']"/>
+      <ownedDiagramElements xmi:type="diagram:DNode" uid="_sM0cNMZUEfC0Xo-FjT6mnQ" name="&lt;&lt;component>>&#xA;ExitParkingBarrier:ExitParkingBarrier [1..1]" width="15" height="7" resizeKind="NSEW">
+        <target xmi:type="sysadl:ComponentUse" href="SmartParking.sysadl#//@packages[name='SmartParkingComponents']/@definitions[name='SmartParkingSystem']/@composite/@components[name='ExitParkingBarrier']"/>
+        <semanticElements xmi:type="sysadl:ComponentUse" href="SmartParking.sysadl#//@packages[name='SmartParkingComponents']/@definitions[name='SmartParkingSystem']/@composite/@components[name='ExitParkingBarrier']"/>
+        <ownedBorderedNodes xmi:type="diagram:DNode" uid="_sM0cN8ZUEfC0Xo-FjT6mnQ" name="expbProxy2 : LogParkingBarrierOPT" width="2" height="2" resizeKind="NSEW">
+          <target xmi:type="sysadl:PortUse" href="SmartParking.sysadl#//@packages[name='SmartParkingComponents']/@definitions[name='SmartParkingSystem']/@composite/@components[name='ExitParkingBarrier']/@ports[name='expbProxy2']"/>
+          <semanticElements xmi:type="sysadl:PortUse" href="SmartParking.sysadl#//@packages[name='SmartParkingComponents']/@definitions[name='SmartParkingSystem']/@composite/@components[name='ExitParkingBarrier']/@ports[name='expbProxy2']"/>
+          <ownedStyle xmi:type="diagram:Square" uid="_sM0cOMZUEfC0Xo-FjT6mnQ" showIcon="false" width="2" height="2" color="204,242,166">
+            <description xmi:type="style:SquareDescription" href="platform:/plugin/org.sysadl.viewpoints/description/SysADL_vp.odesign#//@ownedViewpoints[name='SysADL.Structural']/@ownedRepresentations[name='SysADL.IBD']/@defaultLayer/@containerMappings[name='IBD.Config']/@subNodeMappings[name='IBD.Component%20']/@borderedNodeMappings[name='IBD.Component.PortUse']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.sysadl.viewpoints/description/SysADL_vp.odesign#//@ownedViewpoints[name='SysADL.Structural']/@ownedRepresentations[name='SysADL.IBD']/@defaultLayer/@containerMappings[name='IBD.Config']/@subNodeMappings[name='IBD.Component%20']/@borderedNodeMappings[name='IBD.Component.PortUse']"/>
+        </ownedBorderedNodes>
+        <ownedBorderedNodes xmi:type="diagram:DNode" uid="_sM0cOsZUEfC0Xo-FjT6mnQ" name="expbProxy1 : UpdateAuthorizedIPT" width="2" height="2" resizeKind="NSEW">
+          <target xmi:type="sysadl:PortUse" href="SmartParking.sysadl#//@packages[name='SmartParkingComponents']/@definitions[name='SmartParkingSystem']/@composite/@components[name='ExitParkingBarrier']/@ports[name='expbProxy1']"/>
+          <semanticElements xmi:type="sysadl:PortUse" href="SmartParking.sysadl#//@packages[name='SmartParkingComponents']/@definitions[name='SmartParkingSystem']/@composite/@components[name='ExitParkingBarrier']/@ports[name='expbProxy1']"/>
+          <ownedStyle xmi:type="diagram:Square" uid="_sM0cO8ZUEfC0Xo-FjT6mnQ" showIcon="false" width="2" height="2" color="204,242,166">
+            <description xmi:type="style:SquareDescription" href="platform:/plugin/org.sysadl.viewpoints/description/SysADL_vp.odesign#//@ownedViewpoints[name='SysADL.Structural']/@ownedRepresentations[name='SysADL.IBD']/@defaultLayer/@containerMappings[name='IBD.Config']/@subNodeMappings[name='IBD.Component%20']/@borderedNodeMappings[name='IBD.Component.PortUse']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.sysadl.viewpoints/description/SysADL_vp.odesign#//@ownedViewpoints[name='SysADL.Structural']/@ownedRepresentations[name='SysADL.IBD']/@defaultLayer/@containerMappings[name='IBD.Config']/@subNodeMappings[name='IBD.Component%20']/@borderedNodeMappings[name='IBD.Component.PortUse']"/>
+        </ownedBorderedNodes>
+        <ownedStyle xmi:type="diagram:Square" uid="_sM0cNcZUEfC0Xo-FjT6mnQ" showIcon="false" iconPath="/org.sysadl.viewpoints/icons/ComponentUse.gif" labelPosition="node" width="15" height="7" color="126,177,254">
+          <description xmi:type="style:SquareDescription" href="platform:/plugin/org.sysadl.viewpoints/description/SysADL_vp.odesign#//@ownedViewpoints[name='SysADL.Structural']/@ownedRepresentations[name='SysADL.IBD']/@defaultLayer/@containerMappings[name='IBD.Config']/@subNodeMappings[name='IBD.Component%20']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.sysadl.viewpoints/description/SysADL_vp.odesign#//@ownedViewpoints[name='SysADL.Structural']/@ownedRepresentations[name='SysADL.IBD']/@defaultLayer/@containerMappings[name='IBD.Config']/@subNodeMappings[name='IBD.Component%20']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DNode" uid="_uSIi5sZUEfC0Xo-FjT6mnQ" name="&lt;&lt;component>>&#xA;EntryParkingBarrier:EntryParkingBarrier [1..1]" width="15" height="7" resizeKind="NSEW">
+        <target xmi:type="sysadl:ComponentUse" href="SmartParking.sysadl#//@packages[name='SmartParkingComponents']/@definitions[name='SmartParkingSystem']/@composite/@components[name='EntryParkingBarrier']"/>
+        <semanticElements xmi:type="sysadl:ComponentUse" href="SmartParking.sysadl#//@packages[name='SmartParkingComponents']/@definitions[name='SmartParkingSystem']/@composite/@components[name='EntryParkingBarrier']"/>
+        <ownedBorderedNodes xmi:type="diagram:DNode" uid="_uSIi6cZUEfC0Xo-FjT6mnQ" name="epbProxy1 : UpdateAuthorizedIPT" width="2" height="2" resizeKind="NSEW">
+          <target xmi:type="sysadl:PortUse" href="SmartParking.sysadl#//@packages[name='SmartParkingComponents']/@definitions[name='SmartParkingSystem']/@composite/@components[name='EntryParkingBarrier']/@ports[name='epbProxy1']"/>
+          <semanticElements xmi:type="sysadl:PortUse" href="SmartParking.sysadl#//@packages[name='SmartParkingComponents']/@definitions[name='SmartParkingSystem']/@composite/@components[name='EntryParkingBarrier']/@ports[name='epbProxy1']"/>
+          <ownedStyle xmi:type="diagram:Square" uid="_uSIi6sZUEfC0Xo-FjT6mnQ" showIcon="false" width="2" height="2" color="204,242,166">
+            <description xmi:type="style:SquareDescription" href="platform:/plugin/org.sysadl.viewpoints/description/SysADL_vp.odesign#//@ownedViewpoints[name='SysADL.Structural']/@ownedRepresentations[name='SysADL.IBD']/@defaultLayer/@containerMappings[name='IBD.Config']/@subNodeMappings[name='IBD.Component%20']/@borderedNodeMappings[name='IBD.Component.PortUse']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.sysadl.viewpoints/description/SysADL_vp.odesign#//@ownedViewpoints[name='SysADL.Structural']/@ownedRepresentations[name='SysADL.IBD']/@defaultLayer/@containerMappings[name='IBD.Config']/@subNodeMappings[name='IBD.Component%20']/@borderedNodeMappings[name='IBD.Component.PortUse']"/>
+        </ownedBorderedNodes>
+        <ownedBorderedNodes xmi:type="diagram:DNode" uid="_uSIi7MZUEfC0Xo-FjT6mnQ" name="epbProxy2 : LogParkingBarrierOPT" width="2" height="2" resizeKind="NSEW">
+          <target xmi:type="sysadl:PortUse" href="SmartParking.sysadl#//@packages[name='SmartParkingComponents']/@definitions[name='SmartParkingSystem']/@composite/@components[name='EntryParkingBarrier']/@ports[name='epbProxy2']"/>
+          <semanticElements xmi:type="sysadl:PortUse" href="SmartParking.sysadl#//@packages[name='SmartParkingComponents']/@definitions[name='SmartParkingSystem']/@composite/@components[name='EntryParkingBarrier']/@ports[name='epbProxy2']"/>
+          <ownedStyle xmi:type="diagram:Square" uid="_uSIi7cZUEfC0Xo-FjT6mnQ" showIcon="false" width="2" height="2" color="204,242,166">
+            <description xmi:type="style:SquareDescription" href="platform:/plugin/org.sysadl.viewpoints/description/SysADL_vp.odesign#//@ownedViewpoints[name='SysADL.Structural']/@ownedRepresentations[name='SysADL.IBD']/@defaultLayer/@containerMappings[name='IBD.Config']/@subNodeMappings[name='IBD.Component%20']/@borderedNodeMappings[name='IBD.Component.PortUse']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.sysadl.viewpoints/description/SysADL_vp.odesign#//@ownedViewpoints[name='SysADL.Structural']/@ownedRepresentations[name='SysADL.IBD']/@defaultLayer/@containerMappings[name='IBD.Config']/@subNodeMappings[name='IBD.Component%20']/@borderedNodeMappings[name='IBD.Component.PortUse']"/>
+        </ownedBorderedNodes>
+        <ownedStyle xmi:type="diagram:Square" uid="_uSIi58ZUEfC0Xo-FjT6mnQ" showIcon="false" iconPath="/org.sysadl.viewpoints/icons/ComponentUse.gif" labelPosition="node" width="15" height="7" color="126,177,254">
+          <description xmi:type="style:SquareDescription" href="platform:/plugin/org.sysadl.viewpoints/description/SysADL_vp.odesign#//@ownedViewpoints[name='SysADL.Structural']/@ownedRepresentations[name='SysADL.IBD']/@defaultLayer/@containerMappings[name='IBD.Config']/@subNodeMappings[name='IBD.Component%20']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.sysadl.viewpoints/description/SysADL_vp.odesign#//@ownedViewpoints[name='SysADL.Structural']/@ownedRepresentations[name='SysADL.IBD']/@defaultLayer/@containerMappings[name='IBD.Config']/@subNodeMappings[name='IBD.Component%20']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DNode" uid="_wyV11sZUEfC0Xo-FjT6mnQ" name="&lt;&lt;component>>&#xA;Totem1:Totem [1..1]" width="15" height="7" resizeKind="NSEW">
+        <target xmi:type="sysadl:ComponentUse" href="SmartParking.sysadl#//@packages[name='SmartParkingComponents']/@definitions[name='SmartParkingSystem']/@composite/@components[name='Totem1']"/>
+        <semanticElements xmi:type="sysadl:ComponentUse" href="SmartParking.sysadl#//@packages[name='SmartParkingComponents']/@definitions[name='SmartParkingSystem']/@composite/@components[name='Totem1']"/>
+        <ownedBorderedNodes xmi:type="diagram:DNode" uid="_wyV12cZUEfC0Xo-FjT6mnQ" name="to1Proxy : TransactionStatusOPT" width="2" height="2" resizeKind="NSEW">
+          <target xmi:type="sysadl:PortUse" href="SmartParking.sysadl#//@packages[name='SmartParkingComponents']/@definitions[name='SmartParkingSystem']/@composite/@components[name='Totem1']/@ports[name='to1Proxy']"/>
+          <semanticElements xmi:type="sysadl:PortUse" href="SmartParking.sysadl#//@packages[name='SmartParkingComponents']/@definitions[name='SmartParkingSystem']/@composite/@components[name='Totem1']/@ports[name='to1Proxy']"/>
+          <ownedStyle xmi:type="diagram:Square" uid="_wyV12sZUEfC0Xo-FjT6mnQ" showIcon="false" width="2" height="2" color="204,242,166">
+            <description xmi:type="style:SquareDescription" href="platform:/plugin/org.sysadl.viewpoints/description/SysADL_vp.odesign#//@ownedViewpoints[name='SysADL.Structural']/@ownedRepresentations[name='SysADL.IBD']/@defaultLayer/@containerMappings[name='IBD.Config']/@subNodeMappings[name='IBD.Component%20']/@borderedNodeMappings[name='IBD.Component.PortUse']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.sysadl.viewpoints/description/SysADL_vp.odesign#//@ownedViewpoints[name='SysADL.Structural']/@ownedRepresentations[name='SysADL.IBD']/@defaultLayer/@containerMappings[name='IBD.Config']/@subNodeMappings[name='IBD.Component%20']/@borderedNodeMappings[name='IBD.Component.PortUse']"/>
+        </ownedBorderedNodes>
+        <ownedStyle xmi:type="diagram:Square" uid="_wyV118ZUEfC0Xo-FjT6mnQ" showIcon="false" iconPath="/org.sysadl.viewpoints/icons/ComponentUse.gif" labelPosition="node" width="15" height="7" color="126,177,254">
+          <description xmi:type="style:SquareDescription" href="platform:/plugin/org.sysadl.viewpoints/description/SysADL_vp.odesign#//@ownedViewpoints[name='SysADL.Structural']/@ownedRepresentations[name='SysADL.IBD']/@defaultLayer/@containerMappings[name='IBD.Config']/@subNodeMappings[name='IBD.Component%20']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.sysadl.viewpoints/description/SysADL_vp.odesign#//@ownedViewpoints[name='SysADL.Structural']/@ownedRepresentations[name='SysADL.IBD']/@defaultLayer/@containerMappings[name='IBD.Config']/@subNodeMappings[name='IBD.Component%20']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DNode" uid="_x_4AAsZUEfC0Xo-FjT6mnQ" name="&lt;&lt;component>>&#xA;Section1:Section [1..1]" width="15" height="7" resizeKind="NSEW">
+        <target xmi:type="sysadl:ComponentUse" href="SmartParking.sysadl#//@packages[name='SmartParkingComponents']/@definitions[name='SmartParkingSystem']/@composite/@components[name='Section1']"/>
+        <semanticElements xmi:type="sysadl:ComponentUse" href="SmartParking.sysadl#//@packages[name='SmartParkingComponents']/@definitions[name='SmartParkingSystem']/@composite/@components[name='Section1']"/>
+        <ownedBorderedNodes xmi:type="diagram:DNode" uid="_x_4ABcZUEfC0Xo-FjT6mnQ" name="SecProxy1 : SectionVacancyIPT" width="2" height="2" resizeKind="NSEW">
+          <target xmi:type="sysadl:PortUse" href="SmartParking.sysadl#//@packages[name='SmartParkingComponents']/@definitions[name='SmartParkingSystem']/@composite/@components[name='Section1']/@ports[name='SecProxy1']"/>
+          <semanticElements xmi:type="sysadl:PortUse" href="SmartParking.sysadl#//@packages[name='SmartParkingComponents']/@definitions[name='SmartParkingSystem']/@composite/@components[name='Section1']/@ports[name='SecProxy1']"/>
+          <ownedStyle xmi:type="diagram:Square" uid="_x_4nAMZUEfC0Xo-FjT6mnQ" showIcon="false" width="2" height="2" color="204,242,166">
+            <description xmi:type="style:SquareDescription" href="platform:/plugin/org.sysadl.viewpoints/description/SysADL_vp.odesign#//@ownedViewpoints[name='SysADL.Structural']/@ownedRepresentations[name='SysADL.IBD']/@defaultLayer/@containerMappings[name='IBD.Config']/@subNodeMappings[name='IBD.Component%20']/@borderedNodeMappings[name='IBD.Component.PortUse']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.sysadl.viewpoints/description/SysADL_vp.odesign#//@ownedViewpoints[name='SysADL.Structural']/@ownedRepresentations[name='SysADL.IBD']/@defaultLayer/@containerMappings[name='IBD.Config']/@subNodeMappings[name='IBD.Component%20']/@borderedNodeMappings[name='IBD.Component.PortUse']"/>
+        </ownedBorderedNodes>
+        <ownedBorderedNodes xmi:type="diagram:DNode" uid="_x_4nAsZUEfC0Xo-FjT6mnQ" name="SecProxy2 : SectionVacancyOPT" width="2" height="2" resizeKind="NSEW">
+          <target xmi:type="sysadl:PortUse" href="SmartParking.sysadl#//@packages[name='SmartParkingComponents']/@definitions[name='SmartParkingSystem']/@composite/@components[name='Section1']/@ports[name='SecProxy2']"/>
+          <semanticElements xmi:type="sysadl:PortUse" href="SmartParking.sysadl#//@packages[name='SmartParkingComponents']/@definitions[name='SmartParkingSystem']/@composite/@components[name='Section1']/@ports[name='SecProxy2']"/>
+          <ownedStyle xmi:type="diagram:Square" uid="_x_4nA8ZUEfC0Xo-FjT6mnQ" showIcon="false" width="2" height="2" color="204,242,166">
+            <description xmi:type="style:SquareDescription" href="platform:/plugin/org.sysadl.viewpoints/description/SysADL_vp.odesign#//@ownedViewpoints[name='SysADL.Structural']/@ownedRepresentations[name='SysADL.IBD']/@defaultLayer/@containerMappings[name='IBD.Config']/@subNodeMappings[name='IBD.Component%20']/@borderedNodeMappings[name='IBD.Component.PortUse']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.sysadl.viewpoints/description/SysADL_vp.odesign#//@ownedViewpoints[name='SysADL.Structural']/@ownedRepresentations[name='SysADL.IBD']/@defaultLayer/@containerMappings[name='IBD.Config']/@subNodeMappings[name='IBD.Component%20']/@borderedNodeMappings[name='IBD.Component.PortUse']"/>
+        </ownedBorderedNodes>
+        <ownedStyle xmi:type="diagram:Square" uid="_x_4AA8ZUEfC0Xo-FjT6mnQ" showIcon="false" iconPath="/org.sysadl.viewpoints/icons/ComponentUse.gif" labelPosition="node" width="15" height="7" color="126,177,254">
+          <description xmi:type="style:SquareDescription" href="platform:/plugin/org.sysadl.viewpoints/description/SysADL_vp.odesign#//@ownedViewpoints[name='SysADL.Structural']/@ownedRepresentations[name='SysADL.IBD']/@defaultLayer/@containerMappings[name='IBD.Config']/@subNodeMappings[name='IBD.Component%20']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.sysadl.viewpoints/description/SysADL_vp.odesign#//@ownedViewpoints[name='SysADL.Structural']/@ownedRepresentations[name='SysADL.IBD']/@defaultLayer/@containerMappings[name='IBD.Config']/@subNodeMappings[name='IBD.Component%20']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DNode" uid="_DNErysZVEfC0Xo-FjT6mnQ" name="&lt;&lt;component>>&#xA;CentralControllerCP:CentralControllerCP [1..1]" width="15" height="7" resizeKind="NSEW">
+        <target xmi:type="sysadl:ComponentUse" href="SmartParking.sysadl#//@packages[name='SmartParkingComponents']/@definitions[name='SmartParkingSystem']/@composite/@components[name='CentralControllerCP']"/>
+        <semanticElements xmi:type="sysadl:ComponentUse" href="SmartParking.sysadl#//@packages[name='SmartParkingComponents']/@definitions[name='SmartParkingSystem']/@composite/@components[name='CentralControllerCP']"/>
+        <ownedBorderedNodes xmi:type="diagram:DNode" uid="_DNErzcZVEfC0Xo-FjT6mnQ" name="cec3 : UpdateAuthorizedOPT" width="2" height="2" resizeKind="NSEW">
+          <target xmi:type="sysadl:PortUse" href="SmartParking.sysadl#//@packages[name='SmartParkingComponents']/@definitions[name='SmartParkingSystem']/@composite/@components[name='CentralControllerCP']/@ports[name='cec3']"/>
+          <semanticElements xmi:type="sysadl:PortUse" href="SmartParking.sysadl#//@packages[name='SmartParkingComponents']/@definitions[name='SmartParkingSystem']/@composite/@components[name='CentralControllerCP']/@ports[name='cec3']"/>
+          <ownedStyle xmi:type="diagram:Square" uid="_DNErzsZVEfC0Xo-FjT6mnQ" showIcon="false" width="2" height="2" color="204,242,166">
+            <description xmi:type="style:SquareDescription" href="platform:/plugin/org.sysadl.viewpoints/description/SysADL_vp.odesign#//@ownedViewpoints[name='SysADL.Structural']/@ownedRepresentations[name='SysADL.IBD']/@defaultLayer/@containerMappings[name='IBD.Config']/@subNodeMappings[name='IBD.Component%20']/@borderedNodeMappings[name='IBD.Component.PortUse']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.sysadl.viewpoints/description/SysADL_vp.odesign#//@ownedViewpoints[name='SysADL.Structural']/@ownedRepresentations[name='SysADL.IBD']/@defaultLayer/@containerMappings[name='IBD.Config']/@subNodeMappings[name='IBD.Component%20']/@borderedNodeMappings[name='IBD.Component.PortUse']"/>
+        </ownedBorderedNodes>
+        <ownedBorderedNodes xmi:type="diagram:DNode" uid="_DNEr0MZVEfC0Xo-FjT6mnQ" name="cec4 : SectionVacancyOPT" width="2" height="2" resizeKind="NSEW">
+          <target xmi:type="sysadl:PortUse" href="SmartParking.sysadl#//@packages[name='SmartParkingComponents']/@definitions[name='SmartParkingSystem']/@composite/@components[name='CentralControllerCP']/@ports[name='cec4']"/>
+          <semanticElements xmi:type="sysadl:PortUse" href="SmartParking.sysadl#//@packages[name='SmartParkingComponents']/@definitions[name='SmartParkingSystem']/@composite/@components[name='CentralControllerCP']/@ports[name='cec4']"/>
+          <ownedStyle xmi:type="diagram:Square" uid="_DNEr0cZVEfC0Xo-FjT6mnQ" showIcon="false" width="2" height="2" color="204,242,166">
+            <description xmi:type="style:SquareDescription" href="platform:/plugin/org.sysadl.viewpoints/description/SysADL_vp.odesign#//@ownedViewpoints[name='SysADL.Structural']/@ownedRepresentations[name='SysADL.IBD']/@defaultLayer/@containerMappings[name='IBD.Config']/@subNodeMappings[name='IBD.Component%20']/@borderedNodeMappings[name='IBD.Component.PortUse']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.sysadl.viewpoints/description/SysADL_vp.odesign#//@ownedViewpoints[name='SysADL.Structural']/@ownedRepresentations[name='SysADL.IBD']/@defaultLayer/@containerMappings[name='IBD.Config']/@subNodeMappings[name='IBD.Component%20']/@borderedNodeMappings[name='IBD.Component.PortUse']"/>
+        </ownedBorderedNodes>
+        <ownedBorderedNodes xmi:type="diagram:DNode" uid="_DNFS0MZVEfC0Xo-FjT6mnQ" name="cec1 : LogParkingBarrierIPT" width="2" height="2" resizeKind="NSEW">
+          <target xmi:type="sysadl:PortUse" href="SmartParking.sysadl#//@packages[name='SmartParkingComponents']/@definitions[name='SmartParkingSystem']/@composite/@components[name='CentralControllerCP']/@ports[name='cec1']"/>
+          <semanticElements xmi:type="sysadl:PortUse" href="SmartParking.sysadl#//@packages[name='SmartParkingComponents']/@definitions[name='SmartParkingSystem']/@composite/@components[name='CentralControllerCP']/@ports[name='cec1']"/>
+          <ownedStyle xmi:type="diagram:Square" uid="_DNFS0cZVEfC0Xo-FjT6mnQ" showIcon="false" width="2" height="2" color="204,242,166">
+            <description xmi:type="style:SquareDescription" href="platform:/plugin/org.sysadl.viewpoints/description/SysADL_vp.odesign#//@ownedViewpoints[name='SysADL.Structural']/@ownedRepresentations[name='SysADL.IBD']/@defaultLayer/@containerMappings[name='IBD.Config']/@subNodeMappings[name='IBD.Component%20']/@borderedNodeMappings[name='IBD.Component.PortUse']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.sysadl.viewpoints/description/SysADL_vp.odesign#//@ownedViewpoints[name='SysADL.Structural']/@ownedRepresentations[name='SysADL.IBD']/@defaultLayer/@containerMappings[name='IBD.Config']/@subNodeMappings[name='IBD.Component%20']/@borderedNodeMappings[name='IBD.Component.PortUse']"/>
+        </ownedBorderedNodes>
+        <ownedBorderedNodes xmi:type="diagram:DNode" uid="_DNFS08ZVEfC0Xo-FjT6mnQ" name="cec2 : TransactionStatusIPT" width="2" height="2" resizeKind="NSEW">
+          <target xmi:type="sysadl:PortUse" href="SmartParking.sysadl#//@packages[name='SmartParkingComponents']/@definitions[name='SmartParkingSystem']/@composite/@components[name='CentralControllerCP']/@ports[name='cec2']"/>
+          <semanticElements xmi:type="sysadl:PortUse" href="SmartParking.sysadl#//@packages[name='SmartParkingComponents']/@definitions[name='SmartParkingSystem']/@composite/@components[name='CentralControllerCP']/@ports[name='cec2']"/>
+          <ownedStyle xmi:type="diagram:Square" uid="_DNFS1MZVEfC0Xo-FjT6mnQ" showIcon="false" width="2" height="2" color="204,242,166">
+            <description xmi:type="style:SquareDescription" href="platform:/plugin/org.sysadl.viewpoints/description/SysADL_vp.odesign#//@ownedViewpoints[name='SysADL.Structural']/@ownedRepresentations[name='SysADL.IBD']/@defaultLayer/@containerMappings[name='IBD.Config']/@subNodeMappings[name='IBD.Component%20']/@borderedNodeMappings[name='IBD.Component.PortUse']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.sysadl.viewpoints/description/SysADL_vp.odesign#//@ownedViewpoints[name='SysADL.Structural']/@ownedRepresentations[name='SysADL.IBD']/@defaultLayer/@containerMappings[name='IBD.Config']/@subNodeMappings[name='IBD.Component%20']/@borderedNodeMappings[name='IBD.Component.PortUse']"/>
+        </ownedBorderedNodes>
+        <ownedBorderedNodes xmi:type="diagram:DNode" uid="_DNFS1sZVEfC0Xo-FjT6mnQ" name="cec5 : SectionVacancyIPT" width="2" height="2" resizeKind="NSEW">
+          <target xmi:type="sysadl:PortUse" href="SmartParking.sysadl#//@packages[name='SmartParkingComponents']/@definitions[name='SmartParkingSystem']/@composite/@components[name='CentralControllerCP']/@ports[name='cec5']"/>
+          <semanticElements xmi:type="sysadl:PortUse" href="SmartParking.sysadl#//@packages[name='SmartParkingComponents']/@definitions[name='SmartParkingSystem']/@composite/@components[name='CentralControllerCP']/@ports[name='cec5']"/>
+          <ownedStyle xmi:type="diagram:Square" uid="_DNFS18ZVEfC0Xo-FjT6mnQ" showIcon="false" width="2" height="2" color="204,242,166">
+            <description xmi:type="style:SquareDescription" href="platform:/plugin/org.sysadl.viewpoints/description/SysADL_vp.odesign#//@ownedViewpoints[name='SysADL.Structural']/@ownedRepresentations[name='SysADL.IBD']/@defaultLayer/@containerMappings[name='IBD.Config']/@subNodeMappings[name='IBD.Component%20']/@borderedNodeMappings[name='IBD.Component.PortUse']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.sysadl.viewpoints/description/SysADL_vp.odesign#//@ownedViewpoints[name='SysADL.Structural']/@ownedRepresentations[name='SysADL.IBD']/@defaultLayer/@containerMappings[name='IBD.Config']/@subNodeMappings[name='IBD.Component%20']/@borderedNodeMappings[name='IBD.Component.PortUse']"/>
+        </ownedBorderedNodes>
+        <ownedStyle xmi:type="diagram:Square" uid="_DNEry8ZVEfC0Xo-FjT6mnQ" showIcon="false" iconPath="/org.sysadl.viewpoints/icons/ComponentUse.gif" labelPosition="node" width="15" height="7" color="126,177,254">
+          <description xmi:type="style:SquareDescription" href="platform:/plugin/org.sysadl.viewpoints/description/SysADL_vp.odesign#//@ownedViewpoints[name='SysADL.Structural']/@ownedRepresentations[name='SysADL.IBD']/@defaultLayer/@containerMappings[name='IBD.Config']/@subNodeMappings[name='IBD.Component%20']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.sysadl.viewpoints/description/SysADL_vp.odesign#//@ownedViewpoints[name='SysADL.Structural']/@ownedRepresentations[name='SysADL.IBD']/@defaultLayer/@containerMappings[name='IBD.Config']/@subNodeMappings[name='IBD.Component%20']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DNode" uid="_HARQrMZVEfC0Xo-FjT6mnQ" name="&lt;&lt;component>>&#xA;Section2:Section [1..1]" width="15" height="7" resizeKind="NSEW">
+        <target xmi:type="sysadl:ComponentUse" href="SmartParking.sysadl#//@packages[name='SmartParkingComponents']/@definitions[name='SmartParkingSystem']/@composite/@components[name='Section2']"/>
+        <semanticElements xmi:type="sysadl:ComponentUse" href="SmartParking.sysadl#//@packages[name='SmartParkingComponents']/@definitions[name='SmartParkingSystem']/@composite/@components[name='Section2']"/>
+        <ownedBorderedNodes xmi:type="diagram:DNode" uid="_HAR3osZVEfC0Xo-FjT6mnQ" name="SecProxy1 : SectionVacancyIPT" width="2" height="2" resizeKind="NSEW">
+          <target xmi:type="sysadl:PortUse" href="SmartParking.sysadl#//@packages[name='SmartParkingComponents']/@definitions[name='SmartParkingSystem']/@composite/@components[name='Section2']/@ports[name='SecProxy1']"/>
+          <semanticElements xmi:type="sysadl:PortUse" href="SmartParking.sysadl#//@packages[name='SmartParkingComponents']/@definitions[name='SmartParkingSystem']/@composite/@components[name='Section2']/@ports[name='SecProxy1']"/>
+          <ownedStyle xmi:type="diagram:Square" uid="_HAR3o8ZVEfC0Xo-FjT6mnQ" showIcon="false" width="2" height="2" color="204,242,166">
+            <description xmi:type="style:SquareDescription" href="platform:/plugin/org.sysadl.viewpoints/description/SysADL_vp.odesign#//@ownedViewpoints[name='SysADL.Structural']/@ownedRepresentations[name='SysADL.IBD']/@defaultLayer/@containerMappings[name='IBD.Config']/@subNodeMappings[name='IBD.Component%20']/@borderedNodeMappings[name='IBD.Component.PortUse']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.sysadl.viewpoints/description/SysADL_vp.odesign#//@ownedViewpoints[name='SysADL.Structural']/@ownedRepresentations[name='SysADL.IBD']/@defaultLayer/@containerMappings[name='IBD.Config']/@subNodeMappings[name='IBD.Component%20']/@borderedNodeMappings[name='IBD.Component.PortUse']"/>
+        </ownedBorderedNodes>
+        <ownedBorderedNodes xmi:type="diagram:DNode" uid="_HAR3pcZVEfC0Xo-FjT6mnQ" name="SecProxy2 : SectionVacancyOPT" width="2" height="2" resizeKind="NSEW">
+          <target xmi:type="sysadl:PortUse" href="SmartParking.sysadl#//@packages[name='SmartParkingComponents']/@definitions[name='SmartParkingSystem']/@composite/@components[name='Section2']/@ports[name='SecProxy2']"/>
+          <semanticElements xmi:type="sysadl:PortUse" href="SmartParking.sysadl#//@packages[name='SmartParkingComponents']/@definitions[name='SmartParkingSystem']/@composite/@components[name='Section2']/@ports[name='SecProxy2']"/>
+          <ownedStyle xmi:type="diagram:Square" uid="_HAR3psZVEfC0Xo-FjT6mnQ" showIcon="false" width="2" height="2" color="204,242,166">
+            <description xmi:type="style:SquareDescription" href="platform:/plugin/org.sysadl.viewpoints/description/SysADL_vp.odesign#//@ownedViewpoints[name='SysADL.Structural']/@ownedRepresentations[name='SysADL.IBD']/@defaultLayer/@containerMappings[name='IBD.Config']/@subNodeMappings[name='IBD.Component%20']/@borderedNodeMappings[name='IBD.Component.PortUse']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.sysadl.viewpoints/description/SysADL_vp.odesign#//@ownedViewpoints[name='SysADL.Structural']/@ownedRepresentations[name='SysADL.IBD']/@defaultLayer/@containerMappings[name='IBD.Config']/@subNodeMappings[name='IBD.Component%20']/@borderedNodeMappings[name='IBD.Component.PortUse']"/>
+        </ownedBorderedNodes>
+        <ownedStyle xmi:type="diagram:Square" uid="_HAR3oMZVEfC0Xo-FjT6mnQ" showIcon="false" iconPath="/org.sysadl.viewpoints/icons/ComponentUse.gif" labelPosition="node" width="15" height="7" color="126,177,254">
+          <description xmi:type="style:SquareDescription" href="platform:/plugin/org.sysadl.viewpoints/description/SysADL_vp.odesign#//@ownedViewpoints[name='SysADL.Structural']/@ownedRepresentations[name='SysADL.IBD']/@defaultLayer/@containerMappings[name='IBD.Config']/@subNodeMappings[name='IBD.Component%20']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.sysadl.viewpoints/description/SysADL_vp.odesign#//@ownedViewpoints[name='SysADL.Structural']/@ownedRepresentations[name='SysADL.IBD']/@defaultLayer/@containerMappings[name='IBD.Config']/@subNodeMappings[name='IBD.Component%20']"/>
+      </ownedDiagramElements>
+      <ownedDiagramElements xmi:type="diagram:DNode" uid="_VYJ8LsZVEfC0Xo-FjT6mnQ" name="&lt;&lt;component>>&#xA;Totem2:Totem [1..1]" width="15" height="7" resizeKind="NSEW">
+        <target xmi:type="sysadl:ComponentUse" href="SmartParking.sysadl#//@packages[name='SmartParkingComponents']/@definitions[name='SmartParkingSystem']/@composite/@components[name='Totem2']"/>
+        <semanticElements xmi:type="sysadl:ComponentUse" href="SmartParking.sysadl#//@packages[name='SmartParkingComponents']/@definitions[name='SmartParkingSystem']/@composite/@components[name='Totem2']"/>
+        <ownedBorderedNodes xmi:type="diagram:DNode" uid="_VYJ8McZVEfC0Xo-FjT6mnQ" name="to1Proxy : TransactionStatusOPT" width="2" height="2" resizeKind="NSEW">
+          <target xmi:type="sysadl:PortUse" href="SmartParking.sysadl#//@packages[name='SmartParkingComponents']/@definitions[name='SmartParkingSystem']/@composite/@components[name='Totem2']/@ports[name='to1Proxy']"/>
+          <semanticElements xmi:type="sysadl:PortUse" href="SmartParking.sysadl#//@packages[name='SmartParkingComponents']/@definitions[name='SmartParkingSystem']/@composite/@components[name='Totem2']/@ports[name='to1Proxy']"/>
+          <ownedStyle xmi:type="diagram:Square" uid="_VYKjMMZVEfC0Xo-FjT6mnQ" showIcon="false" width="2" height="2" color="204,242,166">
+            <description xmi:type="style:SquareDescription" href="platform:/plugin/org.sysadl.viewpoints/description/SysADL_vp.odesign#//@ownedViewpoints[name='SysADL.Structural']/@ownedRepresentations[name='SysADL.IBD']/@defaultLayer/@containerMappings[name='IBD.Config']/@subNodeMappings[name='IBD.Component%20']/@borderedNodeMappings[name='IBD.Component.PortUse']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.sysadl.viewpoints/description/SysADL_vp.odesign#//@ownedViewpoints[name='SysADL.Structural']/@ownedRepresentations[name='SysADL.IBD']/@defaultLayer/@containerMappings[name='IBD.Config']/@subNodeMappings[name='IBD.Component%20']/@borderedNodeMappings[name='IBD.Component.PortUse']"/>
+        </ownedBorderedNodes>
+        <ownedStyle xmi:type="diagram:Square" uid="_VYJ8L8ZVEfC0Xo-FjT6mnQ" showIcon="false" iconPath="/org.sysadl.viewpoints/icons/ComponentUse.gif" labelPosition="node" width="15" height="7" color="126,177,254">
+          <description xmi:type="style:SquareDescription" href="platform:/plugin/org.sysadl.viewpoints/description/SysADL_vp.odesign#//@ownedViewpoints[name='SysADL.Structural']/@ownedRepresentations[name='SysADL.IBD']/@defaultLayer/@containerMappings[name='IBD.Config']/@subNodeMappings[name='IBD.Component%20']/@style"/>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.sysadl.viewpoints/description/SysADL_vp.odesign#//@ownedViewpoints[name='SysADL.Structural']/@ownedRepresentations[name='SysADL.IBD']/@defaultLayer/@containerMappings[name='IBD.Config']/@subNodeMappings[name='IBD.Component%20']"/>
+      </ownedDiagramElements>
+    </ownedDiagramElements>
+    <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/org.sysadl.viewpoints/description/SysADL_vp.odesign#//@ownedViewpoints[name='SysADL.Structural']/@ownedRepresentations[name='SysADL.IBD']"/>
+    <filterVariableHistory xmi:type="diagram:FilterVariableHistory" uid="_n45I4cZUEfC0Xo-FjT6mnQ"/>
+    <activatedLayers xmi:type="description_1:Layer" href="platform:/plugin/org.sysadl.viewpoints/description/SysADL_vp.odesign#//@ownedViewpoints[name='SysADL.Structural']/@ownedRepresentations[name='SysADL.IBD']/@defaultLayer"/>
+    <target xmi:type="sysadl:Configuration" href="SmartParking.sysadl#//@packages[name='SmartParkingComponents']/@definitions[name='SmartParkingSystem']/@composite"/>
   </diagram:DSemanticDiagram>
 </xmi:XMI>
