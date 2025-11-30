@@ -255,7 +255,7 @@ package SmartParkingComponents {
     import SmartParkingPorts ; 
     import SysADL.types ;
     
-	component def TotemControllerCP { 
+    component def TotemControllerCP { 
         ports : 
             to4 : PaymentInfoOPT ;  
             to2 : TransactionStatusIPT ; 
@@ -265,13 +265,13 @@ package SmartParkingComponents {
             to6 : NFDataOPT ; 
     }
     
-	component def PaymentMachineCP { 
+    component def PaymentMachineCP { 
         ports : 
             pm1 : PaymentInfoIPT ; 
             pm2 : TransactionStatusOPT ; 
     }
     
-	component def ParkingBarrierCP { 
+    component def ParkingBarrierCP { 
         ports : 
             pb2 : ParkingBarrierCommandIPT ; 
             pb1 : ParkingBarrierStatusOPT ;  
@@ -281,7 +281,7 @@ package SmartParkingComponents {
         ports : tb1 : EjectCardOPT ; 
     }
     
-	boundary component def DisplayPanelCP { 
+    boundary component def DisplayPanelCP { 
         ports :  
             dp1 : SectionVacancyIPT ; 
             dp3 : SectionVacancyOPT ; 
@@ -292,7 +292,7 @@ package SmartParkingComponents {
         ports :  lpc1 : LicensePlateReadOPT ; 
     }
     
-	component def SmartParkingSystem { 
+    component def SmartParkingSystem { 
         configuration { 
             components : 
                 ExitParkingBarrier : ExitParkingBarrierCP { 
@@ -338,14 +338,14 @@ package SmartParkingComponents {
         ports : led1 : VehiclePresenceIPT ; 
     }
     
-	component def PresenceSensorControllerCP { 
+    component def PresenceSensorControllerCP { 
         ports :   
             ps2 : VehicleCountIPT ; 
             ps3 : VehicleCountOPT ; 
             ps1 : VehiclePresenceIPT ; 
     }
     
-	component def CentralControllerCP { 
+    component def CentralControllerCP { 
         ports : 
             cec3 : UpdateAuthorizedOPT [ 1 , 2 ] ; 
             cec4 : SectionVacancyOPT [ 1 , 2 ] ; 
@@ -354,7 +354,7 @@ package SmartParkingComponents {
             cec5 : SectionVacancyIPT [ 1 , 2 ] ; 
     }
     
-	component def EntryParkingBarrierControllerCP { 
+    component def EntryParkingBarrierControllerCP { 
         ports : 
             epb1 : UpdateAuthorizedIPT ; 
             epb4 : LogParkingBarrierOPT ; 
@@ -373,7 +373,7 @@ package SmartParkingComponents {
             } 
     }
     
-	component def ExitParkingBarrierControllerCP { 
+    component def ExitParkingBarrierControllerCP { 
         ports : 
             expb1 : UpdateAuthorizedIPT ; 
             expb5 : LogParkingBarrierOPT ; 
@@ -395,7 +395,7 @@ package SmartParkingComponents {
         ports : cr1 : CardDataOPT ; 
     }
     
-	component def CardEmitterCP { 
+    component def CardEmitterCP { 
         ports :  ce1 : EjectCardIPT ; 
     } 
     
@@ -467,7 +467,7 @@ package SmartParkingComponents {
         } 
     }
     
-	component def EntryParkingBarrierCP { 
+    component def EntryParkingBarrierCP { 
         ports : 
             epbProxy1 : UpdateAuthorizedIPT ; 
             epbProxy2 : LogParkingBarrierOPT ; 
@@ -645,7 +645,13 @@ package SmartParkingComponents {
                     using pins : 
                         plate : LicensePlateRead ; 
                         status : ParkingBarrierStatusEnum ; 
-                } ControllParkingBarrierAN : ControllParkingBarrierAN { using pins : btnPress : Void ; barrierStatus : ParkingBarrierStatusEnum ; vehiclePresence : Boolean ; } 
+                } 
+                ControllParkingBarrierAN : ControllParkingBarrierAN { 
+                    using pins : 
+                        btnPress : Void ; 
+                        barrierStatus : ParkingBarrierStatusEnum ; 
+                        vehiclePresence : Boolean ; 
+                } 
             
             delegate authorized to data 
             flow from UpdateAuthorizedDataAN to AuthorizedCars 
@@ -659,7 +665,9 @@ package SmartParkingComponents {
             delegate writeCard to WriteToCard 
             delegate ejectCard to EjectCard 
             delegate barrierStatus to status 
-            delegate log to LogParkingBarrierAN delegate vehiclePresent to vehiclePresence delegate barrierCmd to ControllParkingBarrierAN 
+            delegate log to LogParkingBarrierAN 
+            delegate vehiclePresent to vehiclePresence 
+            delegate barrierCmd to ControllParkingBarrierAN 
             
             datastore AuthorizedCars : UpdateAuthorized 
         } 
@@ -667,9 +675,13 @@ package SmartParkingComponents {
     
     action def UpdateAuthorizedDataAN ( data : UpdateAuthorized ) : UpdateAuthorized { }  
     
-    action def ControllParkingBarrierAN ( btnPress : Void , barrierStatus : ParkingBarrierStatusEnum , vehiclePresence : Boolean ) : ParkingBarrierCommandEnum { constraint : post-condition ControllParkingBarrierEQ } 
+    action def ControllParkingBarrierAN ( btnPress : Void , barrierStatus : ParkingBarrierStatusEnum , vehiclePresence : Boolean ) : ParkingBarrierCommandEnum { 
+        constraint : post-condition ControllParkingBarrierEQ 
+    } 
     
-    action def IsAuthorizedClientAN ( licensePlate : LicensePlateRead , authorizedCars : UpdateAuthorized , btnPress : Boolean ) : Boolean { constraint : post-condition IsAuthorizedClientEQ } 
+    action def IsAuthorizedClientAN ( licensePlate : LicensePlateRead , authorizedCars : UpdateAuthorized , btnPress : Boolean ) : Boolean { 
+        constraint : post-condition IsAuthorizedClientEQ 
+    } 
     
     action def WriteToCard ( plate : LicensePlateRead , authorizedClient : Boolean ) : CardData { } 
     
@@ -677,16 +689,64 @@ package SmartParkingComponents {
     
     action def LogParkingBarrierAN ( plate : LicensePlateRead , status : ParkingBarrierStatusEnum , btnPress : Boolean ) : LogParkingBarrier { } 
     
-	constraint ControllParkingBarrierEQ ( btnPress : Boolean , status : ParkingBarrierStatusEnum , vehiclePresence : Boolean ) : ( newPin : ParkingBarrierCommandEnum ) { 
-		equation = (btnPress && status == ParkingBarrierStatusEnum::Closed) ? 
-		    ParkingBarrierCommandEnum::Open : 
-		    ( (status == ParkingBarrierStatusEnum::Open && vehiclePresence) ? 
-		        ParkingBarrierCommandEnum::Close : 
-		        ParkingBarrierCommandEnum::Close )
-			} 
-	
-constraint IsAuthorizedClientEQ ( plateRead : LicensePlateRead , authData : UpdateAuthorized , btnPress : Boolean ) { 
-	equation = (btnPressed && plateRead->licensePlate == authData->licensePlate) ? true : false
+    constraint ControllParkingBarrierEQ ( btnPress : Boolean , status : ParkingBarrierStatusEnum , vehiclePresence : Boolean ) : ( newPin : ParkingBarrierCommandEnum ) { 
+        equation = (btnPress && status == ParkingBarrierStatusEnum::Closed) ? 
+            ParkingBarrierCommandEnum::Open : 
+            ( (status == ParkingBarrierStatusEnum::Open && vehiclePresence) ? 
+                ParkingBarrierCommandEnum::Close : 
+                ParkingBarrierCommandEnum::Close )
+    } 
+    
+    constraint IsAuthorizedClientEQ ( plateRead : LicensePlateRead , authData : UpdateAuthorized , btnPress : Boolean ) { 
+        equation = (btnPressed && plateRead->licensePlate == authData->licensePlate) ? true : false
+    } 
+
+    activity def ExitParkingBarrierAC ( authorized : UpdateAuthorized ) ( plate : LicensePlateRead ) ( barrierStatus : ParkingBarrierStatusEnum ) ( vehiclePresence : Boolean ) ( cardRead : CardData ) : ( log : LogParkingBarrier , cardHandlerCmd : CardHandlerCommandEnum , barrierCmd : ParkingBarrierCommandEnum ) { 
+        body { 
+            actions : 
+                UpdateAuthorizedDataAN : UpdateAuthorizedDataAN { 
+                    using pins : data : UpdateAuthorized ; 
+                } 
+                LogParkingBarrierExitAN : LogParkingBarrierExitAN { 
+                    using pins : 
+                        plate : LicensePlateRead ; 
+                        status : ParkingBarrierStatusEnum ; 
+                } 
+                HandleCardReadAN : HandleCardReadAN { 
+                    using pins : cardRead : CardData ; 
+                } ControllParkingBarrierExitAN : ControllParkingBarrierExitAN { using pins : cardRead : CardData ; plateRead : LicensePlateRead ; authorizedCars : UpdateAuthorized ; barrierStatus : ParkingBarrierStatusEnum ; presence : VehiclePresenceStatus ; } 
+            
+            delegate authorized to data 
+            flow from UpdateAuthorizedDataAN to AuthorizedCars 
+            delegate plate to plate 
+            delegate barrierStatus to status 
+            delegate log to LogParkingBarrierExitAN 
+            delegate vehiclePresence to vehiclePresence 
+            delegate barrierStatus to barrierStatus 
+            
+            delegate cardRead to cardRead 
+            delegate cardHandlerCmd to HandleCardReadAN delegate barrierCmd to ControllParkingBarrierExitAN delegate plate to plateRead flow from AuthorizedCars to authorizedCars delegate vehiclePresence to presence 
+            
+            datastore AuthorizedCars : UpdateAuthorized
+        } 
+    } 
+    
+    action def LogParkingBarrierExitAN ( plate : LicensePlateRead , status : ParkingBarrierStatusEnum ) : LogParkingBarrier { } 
+    
+    // action def ControllParkingBarrierExitAN REMOVIDO
+    
+    action def HandleCardReadAN ( cardRead : CardData ) : CardHandlerCommandEnum { constraint : post-condition HandleCardReadEQ } 
+action def ControllParkingBarrierExitAN ( cardRead : CardData , plateRead : LicensePlateRead , authorizedCars : UpdateAuthorized , barrierStatus : ParkingBarrierStatusEnum , presence : VehiclePresenceStatus ) : ParkingBarrierCommandEnum { constraint : post-condition ControllParkingBarrierExitEQ } 
+constraint ControllParkingBarrierExitEQ ( cardRead : CardData , plateRead : LicensePlateRead , authorizedCars : UpdateAuthorized , barrierStatus : ParkingBarrierStatusEnum , presence : VehiclePresenceStatus ) { 
+	equation = (cardRead->paymentTimestamp > 0 && barrierStatus == ParkingBarrierStatusEnum::Closed) ? 
+            ParkingBarrierCommandEnum::Open : 
+        ( (plate->licensePlate == authorizedCards->licensePlate && barrierStatus == ParkingBarrierStatusEnum::Closed) ? 
+            ParkingBarrierCommandEnum::Open : 
+            ParkingBarrierCommandEnum::Close )
+} constraint HandleCardReadEQ ( cardRead : CardData ) { 
+	equation = (card->paymentTimestamp > 0) ? 
+        CardHandlerCommandEnum::Collect : 
+        CardHandlerCommandEnum::Eject
 } } 
 
 package SmartParkingPorts { 
