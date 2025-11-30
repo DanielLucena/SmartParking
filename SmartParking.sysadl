@@ -21,19 +21,11 @@ package SysADL.types {
     } 
     
     enum TransactionStatusEnum { Success , Failure } 
-    enum DirectionEnum { Up , Down , Left , Right } 
+     
     
-    datatype VacancyDirection { 
-        attributes : 
-            direction : DirectionEnum ; 
-            quantity : Int ; 
-    } 
+     
     
-    datatype Vacancy { 
-        attributes : 
-            vacancyDirection1 : VacancyDirection ; 
-            vacancyDirection2 : VacancyDirection ; 
-    }  
+      
     
     value type Matrix { }   
     
@@ -184,10 +176,7 @@ package SmartParkingConnectors {
         flows : VehiclePresenceStatus from source to target 
     }  
     
-    connector def VacancyCN { 
-        participants : ~ target : VacancyIPT ; ~ source : VacancyOPT ; 
-        flows : Vacancy from source to target 
-    }   
+       
     
     connector def PaymentInfoCN { 
         participants : ~ target : PaymentInfoIPT ; ~ source : PaymentInfoOPT ; 
@@ -756,8 +745,8 @@ package SmartParkingPorts {
     port def VehiclePresenceIPT { flow in VehiclePresenceStatus }        
     port def PaymentInfoOPT { flow in PaymentInfo } 
     port def PaymentInfoIPT { flow in PaymentInfo } 
-    port def VacancyIPT { flow in Vacancy } 
-    port def VacancyOPT { flow inout Vacancy } 
+     
+     
     port def EjectCardIPT { flow in Void } 
     port def EjectCardOPT { flow out Void } 
     port def ParkingBarrierCommandIPT { flow in ParkingBarrierCommandEnum } 
