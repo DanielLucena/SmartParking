@@ -336,11 +336,11 @@ package SmartParkingComponents {
     
     component def CentralControllerCP { 
         ports : 
-            cec3 : UpdateAuthorizedOPT [ 1 , 2 ] ; 
-            cec4 : SectionVacancyOPT [ 1 , 2 ] ; 
-            cec1 : LogParkingBarrierIPT [ 1 , 2 ] ; 
-            cec2 : TransactionStatusIPT [ 1 , 2 ] ; 
-            cec5 : SectionVacancyIPT [ 1 , 2 ] ; 
+            cec3 : UpdateAuthorizedOPT [ 1 , 10 ] ; 
+            cec4 : SectionVacancyOPT [ 1 , 10 ] ; 
+            cec1 : LogParkingBarrierIPT [ 1 , 10 ] ; 
+            cec2 : TransactionStatusIPT [ 1 , 10 ] ; 
+            cec5 : SectionVacancyIPT [ 1 , 10 ] ; 
     }
     
     component def EntryParkingBarrierControllerCP { 
@@ -736,7 +736,7 @@ constraint ControllParkingBarrierExitEQ ( cardRead : CardData , plateRead : Lice
 	equation = (card->paymentTimestamp > 0) ? 
         CardHandlerCommandEnum::Collect : 
         CardHandlerCommandEnum::Eject
-} } 
+} activity def PrepareForPaymentAC ( cardData : CardData ) ( curentTimestamp : Int ) ( payType : PaymentTypeEnum ) : ( payInfo : PaymentInfo ) { body { actions :  CalculateParkingPriceAN : CalculateParkingPriceAN { using pins : cardData : CardData ; currentTimestamp : Int ; } GeneratePaymentInfoAN : GeneratePaymentInfoAN { using pins : payType : PaymentTypeEnum ; parkingPrice : Boolean ; } delegate cardData to cardData delegate curentTimestamp to currentTimestamp flow from CalculateParkingPriceAN to parkingPrice delegate payType to payType delegate payInfo to GeneratePaymentInfoAN } } action def GeneratePaymentInfoAN (  payType : PaymentTypeEnum , parkingPrice : Boolean ) : PaymentInfo { } action def CalculateParkingPriceAN ( cardData : CardData , currentTimestamp : Int ) : Decimal { constraint : post-condition CalculateParkingPriceEQ delegate cardData to cardData delegate currentTimestamp to currentTimestamp delegate CalculateParkingPriceAN to parkingPrice } constraint CalculateParkingPriceEQ ( cardData : CardData , currentTimestamp : Int ) : ( parkingPrice : Decimal ) { equation = ((currentTimestamp - dataCard->EntryTimestamp) / 3600) * 5} activity def AfterPaymentAC ( cardData : CardData ) ( paymentTimestamp : Int ) ( paidAmount : Decimal ) ( CpfOrCnpj : String ) : ( newCardData : CardData , nfData : NFData ) { body { actions : recordNewCardDataAN : recordNewCardDataAN { using pins : oldCardData : CardData ; paymentTimestamp : Int ; } GenerateNFDataAN : GenerateNFDataAN { using pins : paidAmount : Decimal ; cpfOrCnpj : String ; paymentTimestampNF : Int ; } delegate cardData to oldCardData delegate nfData to GenerateNFDataAN delegate newCardData to recordNewCardDataAN delegate CpfOrCnpj to cpfOrCnpj delegate paidAmount to paidAmount delegate paymentTimestamp to paymentTimestampNF delegate paymentTimestamp to paymentTimestamp } } action def recordNewCardDataAN ( oldCardData : CardData , paymentTimestampCard : Int ) : CardData { }   action def GenerateNFDataAN ( paidAmount : Decimal , cpfOrCnpj : String , paymentTimestampNF : Int ) : NFData { } activity def CalculatePartialOccupancyAC ( countIn : VehicleCount ) ( presence : VehiclePresenceStatus ) : ( countOut : VehicleCount ) { body { actions : CalculatePartialOccupancyAN : CalculatePartialOccupancyAN { using pins : countIn : VehicleCount ; presence : VehiclePresenceStatus ; } delegate countOut to CalculatePartialOccupancyAN delegate presence to presence delegate countIn to countIn } } action def CalculatePartialOccupancyAN ( countIn : VehicleCount , presence : VehiclePresenceStatus ) : VehicleCount { constraint : post-condition CalculatePartialOccupancyEQ delegate CalculatePartialOccupancyAN to countOut delegate countIn to countIn delegate presence to presence } } 
 
 package SmartParkingPorts { 
     import SysADL.types ; 
